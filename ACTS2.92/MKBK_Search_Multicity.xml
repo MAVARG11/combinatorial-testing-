@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<System name="MKBK_Search_Multicity">
+  <Parameters>
+    <Parameter id="1" name="I_From" type="1">
+      <values>
+        <value>Single Region</value>
+        <value>Multiple Regions (Africa Europe Far East)</value>
+        <value>Multiple Regions (Australia GCC Hub)</value>
+        <value>Multiple Regions (Hub South North America)</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="2" name="I_To" type="1">
+      <values>
+        <value>Single Region</value>
+        <value>Multiple Regions (Africa Europe Far East)</value>
+        <value>Multiple Regions (Australia GCC Hub)</value>
+        <value>Multiple Regions (Hub South North America)</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="3" name="I_Departure" type="1">
+      <values>
+        <value>Default Date for All Segements</value>
+        <value>Advancing Dates</value>
+        <value>Same Date for all Segments</value>
+        <value>~Unordered Dates</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="5" name="I_Cabin_Class" type="1">
+      <values>
+        <value>Non Premium</value>
+        <value>Premium</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="6" name="I_Pax" type="1">
+      <values>
+        <value>Minimum (1A)</value>
+        <value>Maximum (5A 4C 5I)</value>
+        <value>Maximum (9A 9I)</value>
+        <value>Random valid (2A 2C 1I)</value>
+        <value>~Invalid (9A 9C 9I)</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="17" name="I_Segments" type="1">
+      <values>
+        <value>1</value>
+        <value>2</value>
+        <value>3</value>
+        <value>4</value>
+        <value>5</value>
+        <value>6</value>
+        <value>~Two or More Identical</value>
+        <value>~Four or More Cities</value>
+        <value>3 Segments from same region</value>
+        <value>4 Segments from 4 Regions</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="12" name="I_Jaw_Type" type="1">
+      <values>
+        <value>Open</value>
+        <value>Closed</value>
+        <value>Mixed</value>
+        <value>~More than 2 Open</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="13" name="I_Promo" type="1">
+      <values>
+        <value>Blank</value>
+        <value>~Invalid Promo</value>
+        <value>Route Specific</value>
+        <value>Sales Period</value>
+        <value>Travel Period</value>
+        <value>Pax Count</value>
+        <value>Mixed Restrictions</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="14" name="C_APT_Level" type="1">
+      <values>
+        <value>Global</value>
+        <value>Region</value>
+        <value>Country</value>
+        <value>Station</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="15" name="C_APT_IO" type="1">
+      <values>
+        <value>Outbound &gt; Highest of all Inbound</value>
+        <value>Outbound &lt; Highest of all Inbound</value>
+        <value>Outbound = Highest of all Inbound</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="16" name="C_Sales_Enabled" type="1">
+      <values>
+        <value>Enabled</value>
+        <value>~Disabled</value>
+        <value>~Enabled for Some</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+  </Parameters>
+  <OutputParameters />
+  <Relations />
+  <Constraints />
+  <Testset doi="1">
+    <Testcase TCNo="0">
+      <Value>1</Value>
+      <Value>Europe</Value>
+      <Value>Multiple Regions (Africa Europe Far East)</Value>
+      <Value>Advancing Dates</Value>
+      <Value>Premium</Value>
+      <Value>Maximum (5A 4C 5I)</Value>
+      <Value>1</Value>
+      <Value>Closed</Value>
+      <Value>~Invalid Promo</Value>
+      <Value>Region</Value>
+      <Value>Outbound &lt; Highest of all Inbound</Value>
+      <Value>~Disabled</Value>
+    </Testcase>
+    <Testcase TCNo="1">
+      <Value>2</Value>
+      <Value>Far East</Value>
+      <Value>Multiple Regions (Australia GCC Hub)</Value>
+      <Value>Same Date for all Segments</Value>
+      <Value>Non Premium</Value>
+      <Value>Maximum (9A 9I)</Value>
+      <Value>2</Value>
+      <Value>Mixed</Value>
+      <Value>Route Specific</Value>
+      <Value>Country</Value>
+      <Value>Outbound = Highest of all Inbound</Value>
+      <Value>~Enabled for Some</Value>
+    </Testcase>
+    <Testcase TCNo="2">
+      <Value>3</Value>
+      <Value>Australia Japan Korea</Value>
+      <Value>Multiple Regions (Hub South North America)</Value>
+      <Value>~Unordered Dates</Value>
+      <Value>Premium</Value>
+      <Value>Random valid (2A 2C 1I)</Value>
+      <Value>3</Value>
+      <Value>~More than 2 Open</Value>
+      <Value>Sales Period</Value>
+      <Value>Station</Value>
+      <Value>Outbound &gt; Highest of all Inbound</Value>
+      <Value>Enabled</Value>
+    </Testcase>
+    <Testcase TCNo="3">
+      <Value>4</Value>
+      <Value>GCC Levant Iran Indian Sub</Value>
+      <Value>Single Region</Value>
+      <Value>Default Date for All Segements</Value>
+      <Value>Premium</Value>
+      <Value>~Invalid (9A 9C 9I)</Value>
+      <Value>4</Value>
+      <Value>Open</Value>
+      <Value>Travel Period</Value>
+      <Value>Global</Value>
+      <Value>Outbound &lt; Highest of all Inbound</Value>
+      <Value>~Disabled</Value>
+    </Testcase>
+    <Testcase TCNo="4">
+      <Value>5</Value>
+      <Value>Hub</Value>
+      <Value>Multiple Regions (Australia GCC Hub)</Value>
+      <Value>Advancing Dates</Value>
+      <Value>Non Premium</Value>
+      <Value>Minimum (1A)</Value>
+      <Value>5</Value>
+      <Value>Mixed</Value>
+      <Value>Pax Count</Value>
+      <Value>Global</Value>
+      <Value>Outbound &gt; Highest of all Inbound</Value>
+      <Value>~Enabled for Some</Value>
+    </Testcase>
+    <Testcase TCNo="5">
+      <Value>6</Value>
+      <Value>North America</Value>
+      <Value>Multiple Regions (Africa Europe Far East)</Value>
+      <Value>Same Date for all Segments</Value>
+      <Value>Premium</Value>
+      <Value>Maximum (9A 9I)</Value>
+      <Value>6</Value>
+      <Value>~More than 2 Open</Value>
+      <Value>Mixed Restrictions</Value>
+      <Value>Station</Value>
+      <Value>Outbound &lt; Highest of all Inbound</Value>
+      <Value>Enabled</Value>
+    </Testcase>
+    <Testcase TCNo="6">
+      <Value>7</Value>
+      <Value>South America</Value>
+      <Value>Multiple Regions (Africa Europe Far East)</Value>
+      <Value>Advancing Dates</Value>
+      <Value>Non Premium</Value>
+      <Value>Minimum (1A)</Value>
+      <Value>~Two or More Identical</Value>
+      <Value>Open</Value>
+      <Value>Blank</Value>
+      <Value>Region</Value>
+      <Value>Outbound = Highest of all Inbound</Value>
+      <Value>~Disabled</Value>
+    </Testcase>
+    <Testcase TCNo="7">
+      <Value>8</Value>
+      <Value>Africa (JNB CAI ALY)</Value>
+      <Value>Single Region</Value>
+      <Value>~Unordered Dates</Value>
+      <Value>Non Premium</Value>
+      <Value>Maximum (9A 9I)</Value>
+      <Value>~Four or More Cities</Value>
+      <Value>Mixed</Value>
+      <Value>Pax Count</Value>
+      <Value>Global</Value>
+      <Value>Outbound = Highest of all Inbound</Value>
+      <Value>~Enabled for Some</Value>
+    </Testcase>
+    <Testcase TCNo="8">
+      <Value>9</Value>
+      <Value>Australia Japan Korea</Value>
+      <Value>Multiple Regions (Hub South North America)</Value>
+      <Value>~Unordered Dates</Value>
+      <Value>Premium</Value>
+      <Value>Random valid (2A 2C 1I)</Value>
+      <Value>3 Segments from same region</Value>
+      <Value>Mixed</Value>
+      <Value>Blank</Value>
+      <Value>Region</Value>
+      <Value>Outbound = Highest of all Inbound</Value>
+      <Value>~Disabled</Value>
+    </Testcase>
+    <Testcase TCNo="9">
+      <Value>10</Value>
+      <Value>Hub</Value>
+      <Value>Single Region</Value>
+      <Value>~Unordered Dates</Value>
+      <Value>Premium</Value>
+      <Value>Maximum (9A 9I)</Value>
+      <Value>4 Segments from 4 Regions</Value>
+      <Value>Closed</Value>
+      <Value>Blank</Value>
+      <Value>Country</Value>
+      <Value>Outbound &gt; Highest of all Inbound</Value>
+      <Value>Enabled</Value>
+    </Testcase>
+  </Testset>
+  <Header>
+    <Value />
+    <Value>I_FROM</Value>
+    <Value>I_TO</Value>
+    <Value>I_DEPARTURE</Value>
+    <Value>I_CABIN_CLASS</Value>
+    <Value>I_PAX</Value>
+    <Value>I_SEGMENTS</Value>
+    <Value>I_JAW_TYPE</Value>
+    <Value>I_PROMO</Value>
+    <Value>C_APT_LEVEL</Value>
+    <Value>C_APT_IO</Value>
+    <Value>C_SALES_ENABLED</Value>
+  </Header>
+  <Stat-Data>
+    <ExecutionTime>0.001</ExecutionTime>
+    <MaxDomainSize>10</MaxDomainSize>
+    <MinDomainSize>2</MinDomainSize>
+    <TotalNoOfCombination>54</TotalNoOfCombination>
+    <TotalNoOfTests>10</TotalNoOfTests>
+    <Algorithm>IPOG</Algorithm>
+  </Stat-Data>
+</System>
+

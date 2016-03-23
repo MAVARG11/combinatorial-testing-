@@ -1,0 +1,4687 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<System name="Make_Booking">
+  <Parameters>
+    <Parameter id="0" name="I_Trip_Type" type="1">
+      <values>
+        <value>OW</value>
+        <value>MC</value>
+        <value>RT</value>
+        <value>RT2</value>
+      </values>
+      <basechoices>
+        <basechoice>RT</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="1" name="I_Region_From" type="1">
+      <values>
+        <value>Africa</value>
+        <value>European</value>
+        <value>Middle East</value>
+        <value>Australia</value>
+        <value>Asia Pacific</value>
+        <value>Hub</value>
+        <value>North America</value>
+        <value>South America</value>
+      </values>
+      <basechoices>
+        <basechoice>Hub</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="2" name="I_Region_To" type="1">
+      <values>
+        <value>Africa</value>
+        <value>European</value>
+        <value>Middle East</value>
+        <value>Australia</value>
+        <value>Asia Pacific</value>
+        <value>Hub</value>
+        <value>North America</value>
+        <value>South America</value>
+      </values>
+      <basechoices>
+        <basechoice>Middle East</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="38" name="I_Departure" type="1">
+      <values>
+        <value>Satisfies APT</value>
+        <value>Does Not Satisfy APT (Calendar Shift)</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="39" name="I_Arrival" type="1">
+      <values>
+        <value>Satisfies APT</value>
+        <value>Not Applicable</value>
+        <value>Does Not Satisfy APT (Calendar Shift)</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="4" name="I_Itinerary" type="1">
+      <values>
+        <value>5th Freedom</value>
+        <value>XX Only</value>
+        <value>XX Code Share</value>
+        <value>XX One World</value>
+        <value>XX Interline</value>
+        <value>Includes Train</value>
+        <value>Includes Bus</value>
+      </values>
+      <basechoices>
+        <basechoice>XX Only</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="9" name="I_Cabin" type="1">
+      <values>
+        <value>Not Premium</value>
+        <value>Premium</value>
+      </values>
+      <basechoices>
+        <basechoice>Premium</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="10" name="I_No_Of_Segments" type="1">
+      <values>
+        <value>1</value>
+        <value>3</value>
+        <value>6</value>
+        <value>Not Applicable</value>
+      </values>
+      <basechoices>
+        <basechoice>Not Applicable</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="11" name="I_Jaw_Type" type="1">
+      <values>
+        <value>Open</value>
+        <value>Closed</value>
+        <value>Mixed</value>
+        <value>Not Applicable</value>
+      </values>
+      <basechoices>
+        <basechoice>Not Applicable</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="13" name="I_Pax_Count" type="1">
+      <values>
+        <value>1A 0C 0I</value>
+        <value>2A 1C 1I</value>
+        <value>2A 2I</value>
+        <value>5A 4C 5I</value>
+      </values>
+      <basechoices>
+        <basechoice>2A 1C 1I</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="14" name="I_Cabin_Selection" type="1">
+      <values>
+        <value>Same Cabin</value>
+        <value>Mix Cabin</value>
+      </values>
+      <basechoices>
+        <basechoice>Same Cabin</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="15" name="I_Fare_Family" type="1">
+      <values>
+        <value>Global Promo</value>
+        <value>Restricted</value>
+        <value>Semi Flexible</value>
+        <value>Fully Flexible</value>
+        <value>Proactive</value>
+        <value>Reactive</value>
+        <value>Ultra</value>
+        <value>Not Applicable</value>
+      </values>
+      <basechoices>
+        <basechoice>Semi Flexible</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="18" name="I_Upsell_Teaser" type="1">
+      <values>
+        <value>Select</value>
+        <value>Ignore</value>
+      </values>
+      <basechoices>
+        <basechoice>Ignore</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="19" name="I_Login" type="1">
+      <values>
+        <value>Guest</value>
+        <value>FFP</value>
+      </values>
+      <basechoices>
+        <basechoice>Guest</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="22" name="I_Payment_Type" type="1">
+      <values>
+        <value>Pay Now</value>
+        <value>Pay Later</value>
+      </values>
+      <basechoices>
+        <basechoice>Pay Now</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="23" name="I_Card_Types" type="1">
+      <values>
+        <value>Alipay</value>
+        <value>BankMellat</value>
+        <value>MPESA</value>
+        <value>Credit Cards</value>
+        <value>Later</value>
+        <value>K-net</value>
+        <value>Brasbag</value>
+      </values>
+      <basechoices>
+        <basechoice>Visa</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="24" name="C_Inbound_APT" type="1">
+      <values>
+        <value>Global</value>
+        <value>Region</value>
+        <value>Country</value>
+        <value>Station</value>
+      </values>
+      <basechoices>
+        <basechoice>Station</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="25" name="C_Outbound_APT" type="1">
+      <values>
+        <value>CFF</value>
+        <value>Global</value>
+        <value>Region</value>
+        <value>Country</value>
+        <value>Station</value>
+      </values>
+      <basechoices>
+        <basechoice>Station</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="26" name="C_Pay_Now_Later" type="1">
+      <values>
+        <value>CFF</value>
+        <value>Global</value>
+        <value>Region</value>
+        <value>Country</value>
+        <value>Station</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="28" name="C_TTD_Pay_Now" type="1">
+      <values>
+        <value>Global</value>
+        <value>Region</value>
+        <value>Country</value>
+        <value>Station</value>
+      </values>
+      <basechoices>
+        <basechoice>Station</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="29" name="C_TTD_Pay_Later" type="1">
+      <values>
+        <value>Global</value>
+        <value>Region</value>
+        <value>Country</value>
+        <value>Station</value>
+      </values>
+      <basechoices>
+        <basechoice>Station</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="30" name="C_By_Pass_3D" type="1">
+      <values>
+        <value>Global</value>
+        <value>Region</value>
+        <value>Country</value>
+        <value>Station</value>
+        <value>Not Applicable</value>
+      </values>
+      <basechoices>
+        <basechoice>Station</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="31" name="C_By_Pass_Fraud" type="1">
+      <values>
+        <value>Global</value>
+        <value>Region</value>
+        <value>Country</value>
+        <value>Station</value>
+        <value>Not Applicable</value>
+      </values>
+      <basechoices>
+        <basechoice>Station</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="35" name="C_Display_Tax" type="1">
+      <values>
+        <value>Global</value>
+        <value>Region</value>
+        <value>Country</value>
+        <value>Station</value>
+      </values>
+      <basechoices>
+        <basechoice>Station</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="36" name="C_Sales_Enabled" type="1">
+      <values>
+        <value>Global</value>
+        <value>Region</value>
+        <value>Country</value>
+        <value>Station</value>
+      </values>
+      <basechoices>
+        <basechoice>Station</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="37" name="C_Ticket_Fraud_Booking" type="1">
+      <values>
+        <value>Global</value>
+        <value>Region</value>
+        <value>Country</value>
+        <value>Station</value>
+        <value>Not Applicable</value>
+      </values>
+      <basechoices>
+        <basechoice>Station</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="40" name="C_APIS" type="1">
+      <values>
+        <value>Yes</value>
+        <value>No</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="41" name="C_TTL_Pay_Later" type="1">
+      <values>
+        <value>Global</value>
+        <value>Region</value>
+        <value>Country</value>
+        <value>Station</value>
+        <value>Not Applicable</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+  </Parameters>
+  <OutputParameters />
+  <Relations>
+    <Relation Strength="3" Default="false">
+      <Parameter name="I_Trip_Type">
+        <value>OW</value>
+        <value>MC</value>
+        <value>RT</value>
+        <value>RT2</value>
+      </Parameter>
+      <Parameter name="I_No_Of_Segments">
+        <value>1</value>
+        <value>3</value>
+        <value>6</value>
+        <value>Not Applicable</value>
+      </Parameter>
+      <Parameter name="I_Jaw_Type">
+        <value>Open</value>
+        <value>Closed</value>
+        <value>Mixed</value>
+        <value>Not Applicable</value>
+      </Parameter>
+    </Relation>
+    <Relation Strength="2" Default="false">
+      <Parameter name="C_By_Pass_Fraud">
+        <value>Global</value>
+        <value>Region</value>
+        <value>Country</value>
+        <value>Station</value>
+        <value>Not Applicable</value>
+      </Parameter>
+      <Parameter name="C_Ticket_Fraud_Booking">
+        <value>Global</value>
+        <value>Region</value>
+        <value>Country</value>
+        <value>Station</value>
+        <value>Not Applicable</value>
+      </Parameter>
+    </Relation>
+  </Relations>
+  <Constraints>
+    <Constraint text="(I_Region_From != &quot;Middle East&quot;) =&gt; (I_Region_From != I_Region_To )">
+      <Parameters>
+        <Parameter name="I_Region_From" />
+        <Parameter name="I_Region_To" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Itinerary = &quot;Includes Train&quot;) =&gt; (I_Region_From = &quot;European&quot; || I_Region_To = &quot;European&quot;)">
+      <Parameters>
+        <Parameter name="I_Itinerary" />
+        <Parameter name="I_Region_From" />
+        <Parameter name="I_Region_To" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Itinerary = &quot;Includes Bus&quot;) =&gt; (I_Region_From =&quot;Middle East&quot; || I_Region_To = &quot;Middle East&quot;)">
+      <Parameters>
+        <Parameter name="I_Itinerary" />
+        <Parameter name="I_Region_From" />
+        <Parameter name="I_Region_To" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Trip_Type !=&quot;MC&quot;) =&gt; (I_No_Of_Segments = &quot;Not Applicable&quot; )">
+      <Parameters>
+        <Parameter name="I_Trip_Type" />
+        <Parameter name="I_No_Of_Segments" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Trip_Type =&quot;MC&quot;) =&gt; (I_No_Of_Segments != &quot;Not Applicable&quot; )">
+      <Parameters>
+        <Parameter name="I_Trip_Type" />
+        <Parameter name="I_No_Of_Segments" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Trip_Type = &quot;MC&quot;) =&gt; (I_Jaw_Type = &quot;Open&quot; || I_Jaw_Type = &quot;Closed&quot; || I_Jaw_Type = &quot;Mixed&quot;)">
+      <Parameters>
+        <Parameter name="I_Trip_Type" />
+        <Parameter name="I_Jaw_Type" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Trip_Type != &quot;MC&quot;) =&gt; (I_Jaw_Type = &quot;Not Applicable&quot;)">
+      <Parameters>
+        <Parameter name="I_Trip_Type" />
+        <Parameter name="I_Jaw_Type" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Payment_Type =&quot;Pay Later&quot;) =&gt; (I_Card_Types = &quot;Later&quot; || I_Card_Types = &quot;MPESA&quot;)">
+      <Parameters>
+        <Parameter name="I_Payment_Type" />
+        <Parameter name="I_Card_Types" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Payment_Type = &quot;Pay Now&quot;) =&gt; (C_TTL_Pay_Later = &quot;Not Applicable&quot;)">
+      <Parameters>
+        <Parameter name="I_Payment_Type" />
+        <Parameter name="C_TTL_Pay_Later" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Card_Types = &quot;Brasbag&quot;) =&gt; (I_Region_From = &quot;South America&quot;) ">
+      <Parameters>
+        <Parameter name="I_Card_Types" />
+        <Parameter name="I_Region_To" />
+      </Parameters>
+    </Constraint>
+    <Constraint text=" (I_Card_Types = &quot;BankMellat&quot; || I_Card_Types = &quot;K-net&quot;) =&gt; (I_Region_From = &quot;Middle East&quot;) ">
+      <Parameters>
+        <Parameter name="I_Card_Types" />
+        <Parameter name="I_Region_To" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Card_Types = &quot;Alipay&quot;) =&gt; (I_Region_From = &quot;Asia Pacific&quot;) ">
+      <Parameters>
+        <Parameter name="I_Card_Types" />
+        <Parameter name="I_Region_To" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Card_Types = &quot;MPESA&quot;) =&gt; (I_Region_From = &quot;Africa&quot;) ">
+      <Parameters>
+        <Parameter name="I_Card_Types" />
+        <Parameter name="I_Region_To" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Itinerary = &quot;5th Freedom&quot;) =&gt; (I_Region_To = &quot;South America&quot; || I_Region_To = &quot;Asia Pacific&quot;)">
+      <Parameters>
+        <Parameter name="I_Itinerary" />
+        <Parameter name="I_Region_To" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Trip_Type = &quot;MC&quot;) =&gt; (I_Fare_Family = &quot;Not Applicable&quot;)">
+      <Parameters>
+        <Parameter name="I_Trip_Type" />
+        <Parameter name="I_Fare_Family" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Payment_Type = &quot;Pay Later&quot;) =&gt; (C_By_Pass_3D = &quot;Not Applicable&quot;)">
+      <Parameters>
+        <Parameter name="I_Payment_Type" />
+        <Parameter name="C_By_Pass_3D" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Card_Types = &quot;Later&quot; || I_Card_Types = &quot;MPESA&quot;) =&gt; (I_Payment_Type =&quot;Pay Later&quot;)">
+      <Parameters>
+        <Parameter name="I_Card_Types" />
+        <Parameter name="I_Payment_Type" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Payment_Type = &quot;Pay Later&quot;) =&gt; (C_By_Pass_Fraud = &quot;Not Applicable&quot;)">
+      <Parameters>
+        <Parameter name="I_Payment_Type" />
+        <Parameter name="C_By_Pass_Fraud" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Payment_Type = &quot;Pay Later&quot;) =&gt; (C_Ticket_Fraud_Booking = &quot;Not Applicable&quot;)">
+      <Parameters>
+        <Parameter name="I_Payment_Type" />
+        <Parameter name="C_Ticket_Fraud_Booking" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(C_By_Pass_Fraud = &quot;Not Applicable&quot;) =&gt; (I_Payment_Type = &quot;Pay Later&quot;)">
+      <Parameters>
+        <Parameter name="C_By_Pass_Fraud" />
+        <Parameter name="I_Payment_Type" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(C_Ticket_Fraud_Booking = &quot;Not Applicable&quot;) =&gt; (I_Payment_Type = &quot;Pay Later&quot;)">
+      <Parameters>
+        <Parameter name="C_Ticket_Fraud_Booking" />
+        <Parameter name="I_Payment_Type" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(C_By_Pass_3D = &quot;Not Applicable&quot;) =&gt; (I_Payment_Type = &quot;Pay Later&quot;)">
+      <Parameters>
+        <Parameter name="C_By_Pass_3D" />
+        <Parameter name="I_Payment_Type" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Trip_Type = &quot;MC&quot; || I_Trip_Type = &quot;OW&quot; ) =&gt; (I_Arrival = &quot;Not Applicable&quot;)">
+      <Parameters>
+        <Parameter name="I_Trip_Type" />
+        <Parameter name="I_Arrival" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Trip_Type =  &quot;RT&quot; || I_Trip_Type =  &quot;RT2&quot;) =&gt; (I_Arrival != &quot;Not Applicable&quot;)">
+      <Parameters>
+        <Parameter name="I_Trip_Type" />
+        <Parameter name="I_Arrival" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Fare_Family = &quot;Global Promo&quot; ) || (I_Fare_Family = &quot;Restricted&quot;) || (I_Fare_Family = &quot;Semi Flexible&quot; ) || (I_Fare_Family = &quot;Fully Flexible&quot; ) =&gt; (I_Cabin = &quot;Premium&quot;)">
+      <Parameters>
+        <Parameter name="I_Fare_Family" />
+        <Parameter name="I_Cabin" />
+      </Parameters>
+    </Constraint>
+  </Constraints>
+  <Testset doi="2">
+    <Testcase TCNo="0">
+      <Value>1</Value>
+      <Value>RT</Value>
+      <Value>Africa</Value>
+      <Value>European</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>XX Only</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 1C 1I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Restricted</Value>
+      <Value>Ignore</Value>
+      <Value>FFP</Value>
+      <Value>Pay Later</Value>
+      <Value>MPESA</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>Not Applicable</Value>
+      <Value>No</Value>
+      <Value>Region</Value>
+    </Testcase>
+    <Testcase TCNo="1">
+      <Value>2</Value>
+      <Value>RT2</Value>
+      <Value>Africa</Value>
+      <Value>Middle East</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Satisfies APT</Value>
+      <Value>XX Code Share</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 2I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Semi Flexible</Value>
+      <Value>Select</Value>
+      <Value>Guest</Value>
+      <Value>Pay Now</Value>
+      <Value>Credit Cards</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Yes</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="2">
+      <Value>3</Value>
+      <Value>OW</Value>
+      <Value>Africa</Value>
+      <Value>Australia</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX One World</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>5A 4C 5I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Fully Flexible</Value>
+      <Value>Select</Value>
+      <Value>FFP</Value>
+      <Value>Pay Later</Value>
+      <Value>Later</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Not Applicable</Value>
+      <Value>Yes</Value>
+      <Value>Global</Value>
+    </Testcase>
+    <Testcase TCNo="3">
+      <Value>4</Value>
+      <Value>RT2</Value>
+      <Value>Africa</Value>
+      <Value>Asia Pacific</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Satisfies APT</Value>
+      <Value>XX Interline</Value>
+      <Value>Not Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>1A 0C 0I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Proactive</Value>
+      <Value>Select</Value>
+      <Value>Guest</Value>
+      <Value>Pay Later</Value>
+      <Value>MPESA</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Not Applicable</Value>
+      <Value>No</Value>
+      <Value>Country</Value>
+    </Testcase>
+    <Testcase TCNo="4">
+      <Value>5</Value>
+      <Value>OW</Value>
+      <Value>Africa</Value>
+      <Value>Hub</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX Only</Value>
+      <Value>Not Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>1A 0C 0I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Reactive</Value>
+      <Value>Ignore</Value>
+      <Value>Guest</Value>
+      <Value>Pay Now</Value>
+      <Value>Credit Cards</Value>
+      <Value>Region</Value>
+      <Value>CFF</Value>
+      <Value>CFF</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Yes</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="5">
+      <Value>6</Value>
+      <Value>RT</Value>
+      <Value>Africa</Value>
+      <Value>North America</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>XX Code Share</Value>
+      <Value>Not Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 2I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Ultra</Value>
+      <Value>Ignore</Value>
+      <Value>FFP</Value>
+      <Value>Pay Later</Value>
+      <Value>Later</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Not Applicable</Value>
+      <Value>No</Value>
+      <Value>Station</Value>
+    </Testcase>
+    <Testcase TCNo="6">
+      <Value>7</Value>
+      <Value>MC</Value>
+      <Value>Africa</Value>
+      <Value>South America</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Not Applicable</Value>
+      <Value>5th Freedom</Value>
+      <Value>Not Premium</Value>
+      <Value>1</Value>
+      <Value>Open</Value>
+      <Value>5A 4C 5I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Ignore</Value>
+      <Value>FFP</Value>
+      <Value>Pay Later</Value>
+      <Value>MPESA</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>CFF</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Not Applicable</Value>
+      <Value>No</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="7">
+      <Value>8</Value>
+      <Value>RT</Value>
+      <Value>European</Value>
+      <Value>Africa</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Includes Train</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 1C 1I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Global Promo</Value>
+      <Value>Ignore</Value>
+      <Value>Guest</Value>
+      <Value>Pay Now</Value>
+      <Value>Credit Cards</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Yes</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="8">
+      <Value>9</Value>
+      <Value>RT2</Value>
+      <Value>European</Value>
+      <Value>Middle East</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Includes Bus</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 1C 1I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Restricted</Value>
+      <Value>Select</Value>
+      <Value>Guest</Value>
+      <Value>Pay Later</Value>
+      <Value>Later</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>CFF</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Not Applicable</Value>
+      <Value>No</Value>
+      <Value>Global</Value>
+    </Testcase>
+    <Testcase TCNo="9">
+      <Value>10</Value>
+      <Value>OW</Value>
+      <Value>European</Value>
+      <Value>Australia</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX Interline</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 2I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Semi Flexible</Value>
+      <Value>Ignore</Value>
+      <Value>FFP</Value>
+      <Value>Pay Now</Value>
+      <Value>Credit Cards</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>No</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="10">
+      <Value>11</Value>
+      <Value>RT</Value>
+      <Value>European</Value>
+      <Value>Asia Pacific</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>5th Freedom</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>5A 4C 5I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Fully Flexible</Value>
+      <Value>Select</Value>
+      <Value>FFP</Value>
+      <Value>Pay Now</Value>
+      <Value>Credit Cards</Value>
+      <Value>Country</Value>
+      <Value>CFF</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Yes</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="11">
+      <Value>12</Value>
+      <Value>RT2</Value>
+      <Value>European</Value>
+      <Value>Hub</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Satisfies APT</Value>
+      <Value>XX One World</Value>
+      <Value>Not Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>1A 0C 0I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Proactive</Value>
+      <Value>Select</Value>
+      <Value>FFP</Value>
+      <Value>Pay Later</Value>
+      <Value>Later</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Not Applicable</Value>
+      <Value>No</Value>
+      <Value>Region</Value>
+    </Testcase>
+    <Testcase TCNo="12">
+      <Value>13</Value>
+      <Value>OW</Value>
+      <Value>European</Value>
+      <Value>North America</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Not Applicable</Value>
+      <Value>Includes Train</Value>
+      <Value>Not Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 1C 1I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Reactive</Value>
+      <Value>Ignore</Value>
+      <Value>FFP</Value>
+      <Value>Pay Later</Value>
+      <Value>Later</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Not Applicable</Value>
+      <Value>No</Value>
+      <Value>Country</Value>
+    </Testcase>
+    <Testcase TCNo="13">
+      <Value>14</Value>
+      <Value>RT</Value>
+      <Value>European</Value>
+      <Value>South America</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Satisfies APT</Value>
+      <Value>XX Only</Value>
+      <Value>Not Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>5A 4C 5I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Ultra</Value>
+      <Value>Select</Value>
+      <Value>Guest</Value>
+      <Value>Pay Now</Value>
+      <Value>Credit Cards</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Yes</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="14">
+      <Value>15</Value>
+      <Value>MC</Value>
+      <Value>Middle East</Value>
+      <Value>Africa</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Not Applicable</Value>
+      <Value>Includes Bus</Value>
+      <Value>Premium</Value>
+      <Value>3</Value>
+      <Value>Closed</Value>
+      <Value>2A 1C 1I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Select</Value>
+      <Value>FFP</Value>
+      <Value>Pay Now</Value>
+      <Value>K-net</Value>
+      <Value>Country</Value>
+      <Value>CFF</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Yes</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="15">
+      <Value>16</Value>
+      <Value>RT2</Value>
+      <Value>Middle East</Value>
+      <Value>European</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>XX Code Share</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>5A 4C 5I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Global Promo</Value>
+      <Value>Select</Value>
+      <Value>Guest</Value>
+      <Value>Pay Now</Value>
+      <Value>BankMellat</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>CFF</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Yes</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="16">
+      <Value>17</Value>
+      <Value>OW</Value>
+      <Value>Middle East</Value>
+      <Value>Middle East</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX Interline</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>1A 0C 0I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Fully Flexible</Value>
+      <Value>Ignore</Value>
+      <Value>FFP</Value>
+      <Value>Pay Now</Value>
+      <Value>K-net</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>No</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="17">
+      <Value>18</Value>
+      <Value>RT</Value>
+      <Value>Middle East</Value>
+      <Value>Australia</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Satisfies APT</Value>
+      <Value>XX Only</Value>
+      <Value>Not Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 2I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Proactive</Value>
+      <Value>Ignore</Value>
+      <Value>FFP</Value>
+      <Value>Pay Now</Value>
+      <Value>BankMellat</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>No</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="18">
+      <Value>19</Value>
+      <Value>RT2</Value>
+      <Value>Middle East</Value>
+      <Value>Asia Pacific</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>XX One World</Value>
+      <Value>Not Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 2I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Reactive</Value>
+      <Value>Ignore</Value>
+      <Value>Guest</Value>
+      <Value>Pay Now</Value>
+      <Value>K-net</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>No</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="19">
+      <Value>20</Value>
+      <Value>RT</Value>
+      <Value>Middle East</Value>
+      <Value>Hub</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Includes Bus</Value>
+      <Value>Not Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>1A 0C 0I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Ultra</Value>
+      <Value>Select</Value>
+      <Value>Guest</Value>
+      <Value>Pay Now</Value>
+      <Value>BankMellat</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Yes</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="20">
+      <Value>21</Value>
+      <Value>OW</Value>
+      <Value>Middle East</Value>
+      <Value>North America</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX One World</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>1A 0C 0I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Restricted</Value>
+      <Value>Select</Value>
+      <Value>Guest</Value>
+      <Value>Pay Now</Value>
+      <Value>Credit Cards</Value>
+      <Value>Global</Value>
+      <Value>CFF</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Yes</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="21">
+      <Value>22</Value>
+      <Value>RT2</Value>
+      <Value>Middle East</Value>
+      <Value>South America</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>5th Freedom</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 2I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Semi Flexible</Value>
+      <Value>Ignore</Value>
+      <Value>Guest</Value>
+      <Value>Pay Later</Value>
+      <Value>Later</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Not Applicable</Value>
+      <Value>Yes</Value>
+      <Value>Region</Value>
+    </Testcase>
+    <Testcase TCNo="22">
+      <Value>23</Value>
+      <Value>RT2</Value>
+      <Value>Australia</Value>
+      <Value>Africa</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Satisfies APT</Value>
+      <Value>XX Code Share</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 2I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Fully Flexible</Value>
+      <Value>Ignore</Value>
+      <Value>Guest</Value>
+      <Value>Pay Later</Value>
+      <Value>Later</Value>
+      <Value>Global</Value>
+      <Value>CFF</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>Not Applicable</Value>
+      <Value>No</Value>
+      <Value>Country</Value>
+    </Testcase>
+    <Testcase TCNo="23">
+      <Value>24</Value>
+      <Value>MC</Value>
+      <Value>Australia</Value>
+      <Value>European</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Not Applicable</Value>
+      <Value>Includes Train</Value>
+      <Value>Not Premium</Value>
+      <Value>6</Value>
+      <Value>Mixed</Value>
+      <Value>1A 0C 0I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Select</Value>
+      <Value>Guest</Value>
+      <Value>Pay Now</Value>
+      <Value>Credit Cards</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Yes</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="24">
+      <Value>25</Value>
+      <Value>OW</Value>
+      <Value>Australia</Value>
+      <Value>Middle East</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX Only</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>5A 4C 5I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Global Promo</Value>
+      <Value>Select</Value>
+      <Value>FFP</Value>
+      <Value>Pay Later</Value>
+      <Value>Later</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Not Applicable</Value>
+      <Value>Yes</Value>
+      <Value>Station</Value>
+    </Testcase>
+    <Testcase TCNo="25">
+      <Value>26</Value>
+      <Value>RT</Value>
+      <Value>Australia</Value>
+      <Value>Asia Pacific</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>XX Interline</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 1C 1I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Restricted</Value>
+      <Value>Ignore</Value>
+      <Value>Guest</Value>
+      <Value>Pay Later</Value>
+      <Value>Later</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>CFF</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Not Applicable</Value>
+      <Value>Yes</Value>
+      <Value>Station</Value>
+    </Testcase>
+    <Testcase TCNo="26">
+      <Value>27</Value>
+      <Value>OW</Value>
+      <Value>Australia</Value>
+      <Value>Hub</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX One World</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>5A 4C 5I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Semi Flexible</Value>
+      <Value>Ignore</Value>
+      <Value>FFP</Value>
+      <Value>Pay Now</Value>
+      <Value>Credit Cards</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>No</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="27">
+      <Value>28</Value>
+      <Value>RT2</Value>
+      <Value>Australia</Value>
+      <Value>North America</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>XX Interline</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>5A 4C 5I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Proactive</Value>
+      <Value>Ignore</Value>
+      <Value>Guest</Value>
+      <Value>Pay Now</Value>
+      <Value>Credit Cards</Value>
+      <Value>Region</Value>
+      <Value>CFF</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Yes</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="28">
+      <Value>29</Value>
+      <Value>OW</Value>
+      <Value>Australia</Value>
+      <Value>South America</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Not Applicable</Value>
+      <Value>5th Freedom</Value>
+      <Value>Not Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 1C 1I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Reactive</Value>
+      <Value>Select</Value>
+      <Value>Guest</Value>
+      <Value>Pay Now</Value>
+      <Value>Credit Cards</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>No</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="29">
+      <Value>30</Value>
+      <Value>OW</Value>
+      <Value>Asia Pacific</Value>
+      <Value>Africa</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX One World</Value>
+      <Value>Not Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 1C 1I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Ultra</Value>
+      <Value>Ignore</Value>
+      <Value>FFP</Value>
+      <Value>Pay Now</Value>
+      <Value>Alipay</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>CFF</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>No</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="30">
+      <Value>31</Value>
+      <Value>RT2</Value>
+      <Value>Asia Pacific</Value>
+      <Value>European</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Includes Train</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>1A 0C 0I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Semi Flexible</Value>
+      <Value>Select</Value>
+      <Value>Guest</Value>
+      <Value>Pay Now</Value>
+      <Value>Alipay</Value>
+      <Value>Station</Value>
+      <Value>CFF</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>Yes</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="31">
+      <Value>32</Value>
+      <Value>MC</Value>
+      <Value>Asia Pacific</Value>
+      <Value>Middle East</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX Code Share</Value>
+      <Value>Not Premium</Value>
+      <Value>1</Value>
+      <Value>Closed</Value>
+      <Value>2A 2I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Ignore</Value>
+      <Value>Guest</Value>
+      <Value>Pay Now</Value>
+      <Value>Alipay</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>No</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="32">
+      <Value>33</Value>
+      <Value>RT</Value>
+      <Value>Asia Pacific</Value>
+      <Value>Australia</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>XX Interline</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>1A 0C 0I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Global Promo</Value>
+      <Value>Select</Value>
+      <Value>Guest</Value>
+      <Value>Pay Now</Value>
+      <Value>Alipay</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>No</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="33">
+      <Value>34</Value>
+      <Value>RT2</Value>
+      <Value>Asia Pacific</Value>
+      <Value>Hub</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Satisfies APT</Value>
+      <Value>XX Code Share</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>5A 4C 5I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Restricted</Value>
+      <Value>Ignore</Value>
+      <Value>FFP</Value>
+      <Value>Pay Now</Value>
+      <Value>Alipay</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>No</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="34">
+      <Value>35</Value>
+      <Value>RT2</Value>
+      <Value>Asia Pacific</Value>
+      <Value>North America</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>XX Only</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 1C 1I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Fully Flexible</Value>
+      <Value>Select</Value>
+      <Value>Guest</Value>
+      <Value>Pay Now</Value>
+      <Value>Alipay</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>CFF</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>No</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="35">
+      <Value>36</Value>
+      <Value>RT</Value>
+      <Value>Asia Pacific</Value>
+      <Value>South America</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Satisfies APT</Value>
+      <Value>5th Freedom</Value>
+      <Value>Not Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>1A 0C 0I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Proactive</Value>
+      <Value>Ignore</Value>
+      <Value>FFP</Value>
+      <Value>Pay Now</Value>
+      <Value>Alipay</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>No</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="36">
+      <Value>37</Value>
+      <Value>RT</Value>
+      <Value>Hub</Value>
+      <Value>Africa</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>XX Interline</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 1C 1I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Reactive</Value>
+      <Value>Ignore</Value>
+      <Value>FFP</Value>
+      <Value>Pay Now</Value>
+      <Value>Credit Cards</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Yes</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="37">
+      <Value>38</Value>
+      <Value>OW</Value>
+      <Value>Hub</Value>
+      <Value>European</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Not Applicable</Value>
+      <Value>Includes Train</Value>
+      <Value>Not Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 2I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Ultra</Value>
+      <Value>Select</Value>
+      <Value>Guest</Value>
+      <Value>Pay Later</Value>
+      <Value>Later</Value>
+      <Value>Country</Value>
+      <Value>CFF</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Not Applicable</Value>
+      <Value>No</Value>
+      <Value>Global</Value>
+    </Testcase>
+    <Testcase TCNo="38">
+      <Value>39</Value>
+      <Value>OW</Value>
+      <Value>Hub</Value>
+      <Value>Middle East</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Not Applicable</Value>
+      <Value>Includes Bus</Value>
+      <Value>Not Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>5A 4C 5I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Proactive</Value>
+      <Value>Ignore</Value>
+      <Value>Guest</Value>
+      <Value>Pay Now</Value>
+      <Value>Credit Cards</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>CFF</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>No</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="39">
+      <Value>40</Value>
+      <Value>MC</Value>
+      <Value>Hub</Value>
+      <Value>Australia</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX Only</Value>
+      <Value>Not Premium</Value>
+      <Value>3</Value>
+      <Value>Mixed</Value>
+      <Value>2A 2I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Ignore</Value>
+      <Value>FFP</Value>
+      <Value>Pay Later</Value>
+      <Value>Later</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Not Applicable</Value>
+      <Value>No</Value>
+      <Value>Country</Value>
+    </Testcase>
+    <Testcase TCNo="40">
+      <Value>41</Value>
+      <Value>RT2</Value>
+      <Value>Hub</Value>
+      <Value>Asia Pacific</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Satisfies APT</Value>
+      <Value>5th Freedom</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>1A 0C 0I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Global Promo</Value>
+      <Value>Select</Value>
+      <Value>FFP</Value>
+      <Value>Pay Now</Value>
+      <Value>Credit Cards</Value>
+      <Value>Station</Value>
+      <Value>CFF</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>No</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="41">
+      <Value>42</Value>
+      <Value>RT</Value>
+      <Value>Hub</Value>
+      <Value>North America</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Satisfies APT</Value>
+      <Value>XX Code Share</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 1C 1I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Semi Flexible</Value>
+      <Value>Select</Value>
+      <Value>FFP</Value>
+      <Value>Pay Now</Value>
+      <Value>Credit Cards</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>CFF</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Yes</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="42">
+      <Value>43</Value>
+      <Value>RT</Value>
+      <Value>Hub</Value>
+      <Value>South America</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Satisfies APT</Value>
+      <Value>XX One World</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>1A 0C 0I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Fully Flexible</Value>
+      <Value>Select</Value>
+      <Value>FFP</Value>
+      <Value>Pay Now</Value>
+      <Value>Credit Cards</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Yes</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="43">
+      <Value>44</Value>
+      <Value>OW</Value>
+      <Value>North America</Value>
+      <Value>Africa</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX Only</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 2I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Restricted</Value>
+      <Value>Select</Value>
+      <Value>FFP</Value>
+      <Value>Pay Now</Value>
+      <Value>Credit Cards</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Yes</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="44">
+      <Value>45</Value>
+      <Value>RT</Value>
+      <Value>North America</Value>
+      <Value>European</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>XX Code Share</Value>
+      <Value>Not Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>1A 0C 0I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Reactive</Value>
+      <Value>Ignore</Value>
+      <Value>Guest</Value>
+      <Value>Pay Later</Value>
+      <Value>Later</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Not Applicable</Value>
+      <Value>No</Value>
+      <Value>Global</Value>
+    </Testcase>
+    <Testcase TCNo="45">
+      <Value>46</Value>
+      <Value>RT2</Value>
+      <Value>North America</Value>
+      <Value>Middle East</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Satisfies APT</Value>
+      <Value>XX One World</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>5A 4C 5I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Ultra</Value>
+      <Value>Select</Value>
+      <Value>FFP</Value>
+      <Value>Pay Now</Value>
+      <Value>Credit Cards</Value>
+      <Value>Region</Value>
+      <Value>CFF</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>No</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="46">
+      <Value>47</Value>
+      <Value>MC</Value>
+      <Value>North America</Value>
+      <Value>Australia</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX Interline</Value>
+      <Value>Premium</Value>
+      <Value>6</Value>
+      <Value>Closed</Value>
+      <Value>2A 1C 1I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Ignore</Value>
+      <Value>FFP</Value>
+      <Value>Pay Now</Value>
+      <Value>Credit Cards</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>No</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="47">
+      <Value>48</Value>
+      <Value>OW</Value>
+      <Value>North America</Value>
+      <Value>Asia Pacific</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX Only</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 2I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Semi Flexible</Value>
+      <Value>Ignore</Value>
+      <Value>Guest</Value>
+      <Value>Pay Now</Value>
+      <Value>Credit Cards</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>CFF</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>No</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="48">
+      <Value>49</Value>
+      <Value>RT</Value>
+      <Value>North America</Value>
+      <Value>Hub</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>XX One World</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 2I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Global Promo</Value>
+      <Value>Ignore</Value>
+      <Value>Guest</Value>
+      <Value>Pay Now</Value>
+      <Value>Credit Cards</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Yes</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="49">
+      <Value>50</Value>
+      <Value>OW</Value>
+      <Value>North America</Value>
+      <Value>South America</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Not Applicable</Value>
+      <Value>5th Freedom</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 1C 1I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Restricted</Value>
+      <Value>Ignore</Value>
+      <Value>Guest</Value>
+      <Value>Pay Now</Value>
+      <Value>Credit Cards</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>No</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="50">
+      <Value>51</Value>
+      <Value>OW</Value>
+      <Value>South America</Value>
+      <Value>Africa</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX Code Share</Value>
+      <Value>Not Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>5A 4C 5I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Proactive</Value>
+      <Value>Select</Value>
+      <Value>FFP</Value>
+      <Value>Pay Now</Value>
+      <Value>Brasbag</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Yes</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="51">
+      <Value>52</Value>
+      <Value>RT</Value>
+      <Value>South America</Value>
+      <Value>European</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Includes Train</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 1C 1I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Fully Flexible</Value>
+      <Value>Ignore</Value>
+      <Value>Guest</Value>
+      <Value>Pay Now</Value>
+      <Value>Brasbag</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>CFF</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>No</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="52">
+      <Value>53</Value>
+      <Value>RT2</Value>
+      <Value>South America</Value>
+      <Value>Middle East</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Includes Bus</Value>
+      <Value>Not Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 2I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Reactive</Value>
+      <Value>Ignore</Value>
+      <Value>FFP</Value>
+      <Value>Pay Now</Value>
+      <Value>Brasbag</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>No</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="53">
+      <Value>54</Value>
+      <Value>RT2</Value>
+      <Value>South America</Value>
+      <Value>Australia</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Satisfies APT</Value>
+      <Value>XX Interline</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>1A 0C 0I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Ultra</Value>
+      <Value>Ignore</Value>
+      <Value>Guest</Value>
+      <Value>Pay Now</Value>
+      <Value>Brasbag</Value>
+      <Value>Station</Value>
+      <Value>CFF</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Yes</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="54">
+      <Value>55</Value>
+      <Value>MC</Value>
+      <Value>South America</Value>
+      <Value>Asia Pacific</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX One World</Value>
+      <Value>Premium</Value>
+      <Value>3</Value>
+      <Value>Open</Value>
+      <Value>1A 0C 0I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Select</Value>
+      <Value>Guest</Value>
+      <Value>Pay Now</Value>
+      <Value>Brasbag</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Yes</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="55">
+      <Value>56</Value>
+      <Value>RT2</Value>
+      <Value>South America</Value>
+      <Value>Hub</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>XX Interline</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 1C 1I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Global Promo</Value>
+      <Value>Ignore</Value>
+      <Value>Guest</Value>
+      <Value>Pay Now</Value>
+      <Value>Brasbag</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>CFF</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Yes</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="56">
+      <Value>57</Value>
+      <Value>RT</Value>
+      <Value>South America</Value>
+      <Value>North America</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Satisfies APT</Value>
+      <Value>XX Only</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 1C 1I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Restricted</Value>
+      <Value>Ignore</Value>
+      <Value>Guest</Value>
+      <Value>Pay Now</Value>
+      <Value>Brasbag</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Yes</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="57">
+      <Value>58</Value>
+      <Value>OW</Value>
+      <Value>Africa</Value>
+      <Value>North America</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX One World</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>5A 4C 5I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Global Promo</Value>
+      <Value>Select</Value>
+      <Value>FFP</Value>
+      <Value>Pay Later</Value>
+      <Value>MPESA</Value>
+      <Value>Country</Value>
+      <Value>CFF</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Not Applicable</Value>
+      <Value>Yes</Value>
+      <Value>Region</Value>
+    </Testcase>
+    <Testcase TCNo="58">
+      <Value>59</Value>
+      <Value>RT</Value>
+      <Value>Middle East</Value>
+      <Value>South America</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Includes Bus</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>5A 4C 5I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Global Promo</Value>
+      <Value>Ignore</Value>
+      <Value>FFP</Value>
+      <Value>Pay Now</Value>
+      <Value>K-net</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>CFF</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Yes</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="59">
+      <Value>60</Value>
+      <Value>OW</Value>
+      <Value>Hub</Value>
+      <Value>Australia</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX Code Share</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>5A 4C 5I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Restricted</Value>
+      <Value>Select</Value>
+      <Value>Guest</Value>
+      <Value>Pay Now</Value>
+      <Value>Credit Cards</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>No</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="60">
+      <Value>61</Value>
+      <Value>RT2</Value>
+      <Value>South America</Value>
+      <Value>Africa</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Satisfies APT</Value>
+      <Value>XX Only</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 1C 1I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Semi Flexible</Value>
+      <Value>Ignore</Value>
+      <Value>Guest</Value>
+      <Value>Pay Now</Value>
+      <Value>Brasbag</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>CFF</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Yes</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="61">
+      <Value>62</Value>
+      <Value>RT</Value>
+      <Value>North America</Value>
+      <Value>Hub</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>XX Interline</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>1A 0C 0I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Fully Flexible</Value>
+      <Value>Select</Value>
+      <Value>FFP</Value>
+      <Value>Pay Now</Value>
+      <Value>Credit Cards</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Yes</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="62">
+      <Value>63</Value>
+      <Value>RT2</Value>
+      <Value>North America</Value>
+      <Value>European</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Includes Train</Value>
+      <Value>Not Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>5A 4C 5I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Proactive</Value>
+      <Value>Select</Value>
+      <Value>FFP</Value>
+      <Value>Pay Now</Value>
+      <Value>Credit Cards</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>CFF</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Yes</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="63">
+      <Value>64</Value>
+      <Value>OW</Value>
+      <Value>Asia Pacific</Value>
+      <Value>Australia</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX Code Share</Value>
+      <Value>Not Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>5A 4C 5I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Reactive</Value>
+      <Value>Ignore</Value>
+      <Value>Guest</Value>
+      <Value>Pay Now</Value>
+      <Value>Alipay</Value>
+      <Value>Country</Value>
+      <Value>CFF</Value>
+      <Value>CFF</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>No</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="64">
+      <Value>65</Value>
+      <Value>RT</Value>
+      <Value>Australia</Value>
+      <Value>Asia Pacific</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>5th Freedom</Value>
+      <Value>Not Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>1A 0C 0I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Ultra</Value>
+      <Value>Select</Value>
+      <Value>FFP</Value>
+      <Value>Pay Now</Value>
+      <Value>Credit Cards</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>No</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="65">
+      <Value>66</Value>
+      <Value>MC</Value>
+      <Value>European</Value>
+      <Value>Hub</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Not Applicable</Value>
+      <Value>Includes Train</Value>
+      <Value>Premium</Value>
+      <Value>1</Value>
+      <Value>Mixed</Value>
+      <Value>2A 1C 1I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Select</Value>
+      <Value>FFP</Value>
+      <Value>Pay Now</Value>
+      <Value>Credit Cards</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Yes</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="66">
+      <Value>67</Value>
+      <Value>MC</Value>
+      <Value>Middle East</Value>
+      <Value>North America</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Not Applicable</Value>
+      <Value>Includes Bus</Value>
+      <Value>Premium</Value>
+      <Value>1</Value>
+      <Value>Open</Value>
+      <Value>2A 1C 1I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Ignore</Value>
+      <Value>FFP</Value>
+      <Value>Pay Now</Value>
+      <Value>BankMellat</Value>
+      <Value>Region</Value>
+      <Value>CFF</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Yes</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="67">
+      <Value>68</Value>
+      <Value>RT</Value>
+      <Value>European</Value>
+      <Value>Middle East</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Includes Train</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>5A 4C 5I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Restricted</Value>
+      <Value>Select</Value>
+      <Value>FFP</Value>
+      <Value>Pay Now</Value>
+      <Value>Credit Cards</Value>
+      <Value>Station</Value>
+      <Value>CFF</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Yes</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="68">
+      <Value>69</Value>
+      <Value>RT2</Value>
+      <Value>Middle East</Value>
+      <Value>European</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Includes Bus</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 2I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Semi Flexible</Value>
+      <Value>Ignore</Value>
+      <Value>Guest</Value>
+      <Value>Pay Now</Value>
+      <Value>K-net</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Yes</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="69">
+      <Value>70</Value>
+      <Value>OW</Value>
+      <Value>Middle East</Value>
+      <Value>Australia</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Not Applicable</Value>
+      <Value>Includes Bus</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 1C 1I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Fully Flexible</Value>
+      <Value>Ignore</Value>
+      <Value>FFP</Value>
+      <Value>Pay Now</Value>
+      <Value>BankMellat</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Yes</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="70">
+      <Value>71</Value>
+      <Value>RT2</Value>
+      <Value>European</Value>
+      <Value>Asia Pacific</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Satisfies APT</Value>
+      <Value>XX Code Share</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>1A 0C 0I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Global Promo</Value>
+      <Value>Ignore</Value>
+      <Value>FFP</Value>
+      <Value>Pay Now</Value>
+      <Value>Credit Cards</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>CFF</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>No</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="71">
+      <Value>72</Value>
+      <Value>RT2</Value>
+      <Value>Africa</Value>
+      <Value>South America</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Satisfies APT</Value>
+      <Value>XX Code Share</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 2I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Semi Flexible</Value>
+      <Value>Select</Value>
+      <Value>FFP</Value>
+      <Value>Pay Later</Value>
+      <Value>MPESA</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>Not Applicable</Value>
+      <Value>No</Value>
+      <Value>Station</Value>
+    </Testcase>
+    <Testcase TCNo="72">
+      <Value>73</Value>
+      <Value>RT</Value>
+      <Value>Middle East</Value>
+      <Value>European</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Satisfies APT</Value>
+      <Value>XX One World</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 1C 1I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Restricted</Value>
+      <Value>Ignore</Value>
+      <Value>FFP</Value>
+      <Value>Pay Now</Value>
+      <Value>BankMellat</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>No</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="73">
+      <Value>74</Value>
+      <Value>OW</Value>
+      <Value>Middle East</Value>
+      <Value>European</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX Interline</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 1C 1I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Semi Flexible</Value>
+      <Value>Ignore</Value>
+      <Value>Guest</Value>
+      <Value>Pay Now</Value>
+      <Value>BankMellat</Value>
+      <Value>Station</Value>
+      <Value>CFF</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>Yes</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="74">
+      <Value>75</Value>
+      <Value>RT2</Value>
+      <Value>Middle East</Value>
+      <Value>South America</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>XX Interline</Value>
+      <Value>Not Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>5A 4C 5I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Reactive</Value>
+      <Value>Select</Value>
+      <Value>FFP</Value>
+      <Value>Pay Now</Value>
+      <Value>BankMellat</Value>
+      <Value>Global</Value>
+      <Value>CFF</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Yes</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="75">
+      <Value>76</Value>
+      <Value>RT2</Value>
+      <Value>European</Value>
+      <Value>Australia</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Includes Train</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 2I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Ultra</Value>
+      <Value>Ignore</Value>
+      <Value>FFP</Value>
+      <Value>Pay Later</Value>
+      <Value>Later</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>CFF</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Not Applicable</Value>
+      <Value>Yes</Value>
+      <Value>Region</Value>
+    </Testcase>
+    <Testcase TCNo="76">
+      <Value>77</Value>
+      <Value>RT</Value>
+      <Value>European</Value>
+      <Value>Asia Pacific</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Includes Train</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>1A 0C 0I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Fully Flexible</Value>
+      <Value>Select</Value>
+      <Value>Guest</Value>
+      <Value>Pay Later</Value>
+      <Value>Later</Value>
+      <Value>Region</Value>
+      <Value>CFF</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Not Applicable</Value>
+      <Value>Yes</Value>
+      <Value>Station</Value>
+    </Testcase>
+    <Testcase TCNo="77">
+      <Value>78</Value>
+      <Value>RT</Value>
+      <Value>European</Value>
+      <Value>South America</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Includes Train</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 2I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Global Promo</Value>
+      <Value>Select</Value>
+      <Value>FFP</Value>
+      <Value>Pay Later</Value>
+      <Value>Later</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Not Applicable</Value>
+      <Value>Yes</Value>
+      <Value>Global</Value>
+    </Testcase>
+    <Testcase TCNo="78">
+      <Value>79</Value>
+      <Value>OW</Value>
+      <Value>Middle East</Value>
+      <Value>Asia Pacific</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Not Applicable</Value>
+      <Value>Includes Bus</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 2I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Ignore</Value>
+      <Value>FFP</Value>
+      <Value>Pay Now</Value>
+      <Value>BankMellat</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>No</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="79">
+      <Value>80</Value>
+      <Value>RT</Value>
+      <Value>South America</Value>
+      <Value>Asia Pacific</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Satisfies APT</Value>
+      <Value>5th Freedom</Value>
+      <Value>Not Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 1C 1I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Select</Value>
+      <Value>Guest</Value>
+      <Value>Pay Now</Value>
+      <Value>Brasbag</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>No</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="80">
+      <Value>81</Value>
+      <Value>RT</Value>
+      <Value>Africa</Value>
+      <Value>European</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Includes Train</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 2I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Fully Flexible</Value>
+      <Value>Select</Value>
+      <Value>FFP</Value>
+      <Value>Pay Later</Value>
+      <Value>MPESA</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Not Applicable</Value>
+      <Value>No</Value>
+      <Value>Region</Value>
+    </Testcase>
+    <Testcase TCNo="81">
+      <Value>82</Value>
+      <Value>RT</Value>
+      <Value>Middle East</Value>
+      <Value>European</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Includes Train</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 2I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Restricted</Value>
+      <Value>Ignore</Value>
+      <Value>Guest</Value>
+      <Value>Pay Now</Value>
+      <Value>K-net</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>No</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="82">
+      <Value>83</Value>
+      <Value>RT2</Value>
+      <Value>Africa</Value>
+      <Value>Middle East</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Includes Bus</Value>
+      <Value>Not Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 1C 1I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Reactive</Value>
+      <Value>Ignore</Value>
+      <Value>FFP</Value>
+      <Value>Pay Later</Value>
+      <Value>MPESA</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>CFF</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Not Applicable</Value>
+      <Value>Yes</Value>
+      <Value>Region</Value>
+    </Testcase>
+    <Testcase TCNo="83">
+      <Value>84</Value>
+      <Value>RT</Value>
+      <Value>Australia</Value>
+      <Value>Middle East</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Includes Bus</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>5A 4C 5I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Global Promo</Value>
+      <Value>Ignore</Value>
+      <Value>FFP</Value>
+      <Value>Pay Later</Value>
+      <Value>Later</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>CFF</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Not Applicable</Value>
+      <Value>Yes</Value>
+      <Value>Country</Value>
+    </Testcase>
+    <Testcase TCNo="84">
+      <Value>85</Value>
+      <Value>RT2</Value>
+      <Value>Asia Pacific</Value>
+      <Value>Middle East</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Includes Bus</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 1C 1I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Select</Value>
+      <Value>FFP</Value>
+      <Value>Pay Now</Value>
+      <Value>Alipay</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>CFF</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Yes</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="85">
+      <Value>86</Value>
+      <Value>OW</Value>
+      <Value>North America</Value>
+      <Value>Middle East</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Not Applicable</Value>
+      <Value>Includes Bus</Value>
+      <Value>Not Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 1C 1I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Proactive</Value>
+      <Value>Ignore</Value>
+      <Value>FFP</Value>
+      <Value>Pay Later</Value>
+      <Value>Later</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Not Applicable</Value>
+      <Value>No</Value>
+      <Value>Station</Value>
+    </Testcase>
+    <Testcase TCNo="86">
+      <Value>87</Value>
+      <Value>MC</Value>
+      <Value>Middle East</Value>
+      <Value>South America</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Not Applicable</Value>
+      <Value>5th Freedom</Value>
+      <Value>Not Premium</Value>
+      <Value>6</Value>
+      <Value>Mixed</Value>
+      <Value>5A 4C 5I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Ignore</Value>
+      <Value>FFP</Value>
+      <Value>Pay Now</Value>
+      <Value>BankMellat</Value>
+      <Value>Global</Value>
+      <Value>CFF</Value>
+      <Value>CFF</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>No</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="87">
+      <Value>88</Value>
+      <Value>MC</Value>
+      <Value>Middle East</Value>
+      <Value>European</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Not Applicable</Value>
+      <Value>Includes Train</Value>
+      <Value>Premium</Value>
+      <Value>3</Value>
+      <Value>Open</Value>
+      <Value>2A 2I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Ignore</Value>
+      <Value>Guest</Value>
+      <Value>Pay Now</Value>
+      <Value>BankMellat</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>CFF</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Yes</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="88">
+      <Value>89</Value>
+      <Value>OW</Value>
+      <Value>Middle East</Value>
+      <Value>Asia Pacific</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Not Applicable</Value>
+      <Value>5th Freedom</Value>
+      <Value>Not Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>1A 0C 0I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Proactive</Value>
+      <Value>Select</Value>
+      <Value>FFP</Value>
+      <Value>Pay Now</Value>
+      <Value>K-net</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Yes</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="89">
+      <Value>90</Value>
+      <Value>OW</Value>
+      <Value>Middle East</Value>
+      <Value>Australia</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX Only</Value>
+      <Value>Not Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 2I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Ultra</Value>
+      <Value>Ignore</Value>
+      <Value>Guest</Value>
+      <Value>Pay Now</Value>
+      <Value>K-net</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>No</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="90">
+      <Value>91</Value>
+      <Value>MC</Value>
+      <Value>Middle East</Value>
+      <Value>Hub</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX Code Share</Value>
+      <Value>Not Premium</Value>
+      <Value>6</Value>
+      <Value>Open</Value>
+      <Value>2A 2I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Select</Value>
+      <Value>Guest</Value>
+      <Value>Pay Now</Value>
+      <Value>K-net</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>No</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="91">
+      <Value>92</Value>
+      <Value>OW</Value>
+      <Value>Africa</Value>
+      <Value>Australia</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX Only</Value>
+      <Value>Not Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>1A 0C 0I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Ultra</Value>
+      <Value>Select</Value>
+      <Value>Guest</Value>
+      <Value>Pay Later</Value>
+      <Value>MPESA</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Not Applicable</Value>
+      <Value>Yes</Value>
+      <Value>Global</Value>
+    </Testcase>
+    <Testcase TCNo="92">
+      <Value>93</Value>
+      <Value>MC</Value>
+      <Value>Middle East</Value>
+      <Value>Africa</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX Only</Value>
+      <Value>Not Premium</Value>
+      <Value>1</Value>
+      <Value>Closed</Value>
+      <Value>1A 0C 0I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Ignore</Value>
+      <Value>FFP</Value>
+      <Value>Pay Now</Value>
+      <Value>BankMellat</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>No</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="93">
+      <Value>94</Value>
+      <Value>MC</Value>
+      <Value>Middle East</Value>
+      <Value>Middle East</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX Interline</Value>
+      <Value>Premium</Value>
+      <Value>3</Value>
+      <Value>Mixed</Value>
+      <Value>5A 4C 5I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Select</Value>
+      <Value>FFP</Value>
+      <Value>Pay Now</Value>
+      <Value>BankMellat</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Yes</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="94">
+      <Value>95</Value>
+      <Value>RT</Value>
+      <Value>Africa</Value>
+      <Value>Hub</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>XX One World</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>1A 0C 0I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Restricted</Value>
+      <Value>Select</Value>
+      <Value>FFP</Value>
+      <Value>Pay Later</Value>
+      <Value>MPESA</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Not Applicable</Value>
+      <Value>No</Value>
+      <Value>Country</Value>
+    </Testcase>
+    <Testcase TCNo="95">
+      <Value>96</Value>
+      <Value>MC</Value>
+      <Value>Middle East</Value>
+      <Value>North America</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX Only</Value>
+      <Value>Not Premium</Value>
+      <Value>6</Value>
+      <Value>Open</Value>
+      <Value>1A 0C 0I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Select</Value>
+      <Value>Guest</Value>
+      <Value>Pay Now</Value>
+      <Value>K-net</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Yes</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="96">
+      <Value>97</Value>
+      <Value>MC</Value>
+      <Value>Asia Pacific</Value>
+      <Value>South America</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Not Applicable</Value>
+      <Value>5th Freedom</Value>
+      <Value>Premium</Value>
+      <Value>3</Value>
+      <Value>Closed</Value>
+      <Value>5A 4C 5I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Select</Value>
+      <Value>FFP</Value>
+      <Value>Pay Now</Value>
+      <Value>Credit Cards</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>CFF</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Yes</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="97">
+      <Value>98</Value>
+      <Value>MC</Value>
+      <Value>South America</Value>
+      <Value>Australia</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX One World</Value>
+      <Value>Not Premium</Value>
+      <Value>1</Value>
+      <Value>Open</Value>
+      <Value>1A 0C 0I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Select</Value>
+      <Value>Guest</Value>
+      <Value>Pay Now</Value>
+      <Value>Credit Cards</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>No</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="98">
+      <Value>99</Value>
+      <Value>RT2</Value>
+      <Value>Asia Pacific</Value>
+      <Value>South America</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>5th Freedom</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>5A 4C 5I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Reactive</Value>
+      <Value>Ignore</Value>
+      <Value>Guest</Value>
+      <Value>Pay Later</Value>
+      <Value>Later</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Not Applicable</Value>
+      <Value>No</Value>
+      <Value>Station</Value>
+    </Testcase>
+    <Testcase TCNo="99">
+      <Value>100</Value>
+      <Value>OW</Value>
+      <Value>South America</Value>
+      <Value>Asia Pacific</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Not Applicable</Value>
+      <Value>5th Freedom</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 2I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Semi Flexible</Value>
+      <Value>Select</Value>
+      <Value>Guest</Value>
+      <Value>Pay Later</Value>
+      <Value>Later</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>Not Applicable</Value>
+      <Value>Yes</Value>
+      <Value>Global</Value>
+    </Testcase>
+    <Testcase TCNo="100">
+      <Value>101</Value>
+      <Value>MC</Value>
+      <Value>Hub</Value>
+      <Value>Asia Pacific</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX Interline</Value>
+      <Value>Not Premium</Value>
+      <Value>1</Value>
+      <Value>Closed</Value>
+      <Value>1A 0C 0I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Ignore</Value>
+      <Value>FFP</Value>
+      <Value>Pay Now</Value>
+      <Value>Credit Cards</Value>
+      <Value>Country</Value>
+      <Value>CFF</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>No</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="101">
+      <Value>102</Value>
+      <Value>MC</Value>
+      <Value>Africa</Value>
+      <Value>Middle East</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Not Applicable</Value>
+      <Value>Includes Bus</Value>
+      <Value>Not Premium</Value>
+      <Value>3</Value>
+      <Value>Mixed</Value>
+      <Value>5A 4C 5I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Ignore</Value>
+      <Value>Guest</Value>
+      <Value>Pay Now</Value>
+      <Value>Credit Cards</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>No</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="102">
+      <Value>103</Value>
+      <Value>MC</Value>
+      <Value>Africa</Value>
+      <Value>Middle East</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Not Applicable</Value>
+      <Value>Includes Bus</Value>
+      <Value>Premium</Value>
+      <Value>6</Value>
+      <Value>Closed</Value>
+      <Value>2A 1C 1I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Select</Value>
+      <Value>Guest</Value>
+      <Value>Pay Now</Value>
+      <Value>Credit Cards</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Yes</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="103">
+      <Value>104</Value>
+      <Value>RT2</Value>
+      <Value>Middle East</Value>
+      <Value>South America</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Satisfies APT</Value>
+      <Value>5th Freedom</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>5A 4C 5I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Semi Flexible</Value>
+      <Value>Ignore</Value>
+      <Value>Guest</Value>
+      <Value>Pay Later</Value>
+      <Value>Later</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Not Applicable</Value>
+      <Value>Yes</Value>
+      <Value>Country</Value>
+    </Testcase>
+    <Testcase TCNo="104">
+      <Value>105</Value>
+      <Value>MC</Value>
+      <Value>European</Value>
+      <Value>North America</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX One World</Value>
+      <Value>Not Premium</Value>
+      <Value>6</Value>
+      <Value>Closed</Value>
+      <Value>5A 4C 5I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Select</Value>
+      <Value>FFP</Value>
+      <Value>Pay Later</Value>
+      <Value>Later</Value>
+      <Value>Country</Value>
+      <Value>CFF</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Not Applicable</Value>
+      <Value>Yes</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="105">
+      <Value>106</Value>
+      <Value>OW</Value>
+      <Value>Middle East</Value>
+      <Value>Africa</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX Interline</Value>
+      <Value>Not Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 2I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Proactive</Value>
+      <Value>Select</Value>
+      <Value>Guest</Value>
+      <Value>Pay Later</Value>
+      <Value>Later</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Not Applicable</Value>
+      <Value>No</Value>
+      <Value>Global</Value>
+    </Testcase>
+    <Testcase TCNo="106">
+      <Value>107</Value>
+      <Value>MC</Value>
+      <Value>Australia</Value>
+      <Value>Africa</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX Code Share</Value>
+      <Value>Not Premium</Value>
+      <Value>3</Value>
+      <Value>Mixed</Value>
+      <Value>2A 2I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Select</Value>
+      <Value>FFP</Value>
+      <Value>Pay Later</Value>
+      <Value>Later</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Not Applicable</Value>
+      <Value>No</Value>
+      <Value>Region</Value>
+    </Testcase>
+    <Testcase TCNo="107">
+      <Value>108</Value>
+      <Value>MC</Value>
+      <Value>Hub</Value>
+      <Value>Asia Pacific</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX Interline</Value>
+      <Value>Premium</Value>
+      <Value>6</Value>
+      <Value>Open</Value>
+      <Value>5A 4C 5I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Select</Value>
+      <Value>FFP</Value>
+      <Value>Pay Later</Value>
+      <Value>Later</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Not Applicable</Value>
+      <Value>Yes</Value>
+      <Value>Region</Value>
+    </Testcase>
+    <Testcase TCNo="108">
+      <Value>109</Value>
+      <Value>MC</Value>
+      <Value>Middle East</Value>
+      <Value>Africa</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX One World</Value>
+      <Value>Not Premium</Value>
+      <Value>6</Value>
+      <Value>Mixed</Value>
+      <Value>1A 0C 0I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Select</Value>
+      <Value>Guest</Value>
+      <Value>Pay Later</Value>
+      <Value>Later</Value>
+      <Value>Station</Value>
+      <Value>CFF</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Not Applicable</Value>
+      <Value>Yes</Value>
+      <Value>Station</Value>
+    </Testcase>
+    <Testcase TCNo="109">
+      <Value>110</Value>
+      <Value>MC</Value>
+      <Value>Australia</Value>
+      <Value>Hub</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX Only</Value>
+      <Value>Premium</Value>
+      <Value>1</Value>
+      <Value>Open</Value>
+      <Value>1A 0C 0I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Ignore</Value>
+      <Value>Guest</Value>
+      <Value>Pay Later</Value>
+      <Value>Later</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Not Applicable</Value>
+      <Value>Yes</Value>
+      <Value>Global</Value>
+    </Testcase>
+    <Testcase TCNo="110">
+      <Value>111</Value>
+      <Value>RT2</Value>
+      <Value>Asia Pacific</Value>
+      <Value>European</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>XX Interline</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>5A 4C 5I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Ultra</Value>
+      <Value>Select</Value>
+      <Value>Guest</Value>
+      <Value>Pay Later</Value>
+      <Value>Later</Value>
+      <Value>Global</Value>
+      <Value>CFF</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Not Applicable</Value>
+      <Value>Yes</Value>
+      <Value>Country</Value>
+    </Testcase>
+    <Testcase TCNo="111">
+      <Value>112</Value>
+      <Value>MC</Value>
+      <Value>Asia Pacific</Value>
+      <Value>North America</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX Interline</Value>
+      <Value>Not Premium</Value>
+      <Value>3</Value>
+      <Value>Mixed</Value>
+      <Value>1A 0C 0I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Ignore</Value>
+      <Value>Guest</Value>
+      <Value>Pay Later</Value>
+      <Value>Later</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Not Applicable</Value>
+      <Value>No</Value>
+      <Value>Global</Value>
+    </Testcase>
+    <Testcase TCNo="112">
+      <Value>113</Value>
+      <Value>MC</Value>
+      <Value>Hub</Value>
+      <Value>European</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Not Applicable</Value>
+      <Value>Includes Train</Value>
+      <Value>Not Premium</Value>
+      <Value>1</Value>
+      <Value>Closed</Value>
+      <Value>2A 1C 1I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Ignore</Value>
+      <Value>Guest</Value>
+      <Value>Pay Later</Value>
+      <Value>Later</Value>
+      <Value>Global</Value>
+      <Value>CFF</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Not Applicable</Value>
+      <Value>No</Value>
+      <Value>Station</Value>
+    </Testcase>
+    <Testcase TCNo="113">
+      <Value>114</Value>
+      <Value>MC</Value>
+      <Value>South America</Value>
+      <Value>Australia</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX One World</Value>
+      <Value>Not Premium</Value>
+      <Value>3</Value>
+      <Value>Mixed</Value>
+      <Value>2A 2I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Ignore</Value>
+      <Value>Guest</Value>
+      <Value>Pay Later</Value>
+      <Value>Later</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>CFF</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Not Applicable</Value>
+      <Value>Yes</Value>
+      <Value>Station</Value>
+    </Testcase>
+    <Testcase TCNo="114">
+      <Value>115</Value>
+      <Value>MC</Value>
+      <Value>Africa</Value>
+      <Value>Hub</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX One World</Value>
+      <Value>Premium</Value>
+      <Value>3</Value>
+      <Value>Closed</Value>
+      <Value>2A 1C 1I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Ignore</Value>
+      <Value>Guest</Value>
+      <Value>Pay Later</Value>
+      <Value>MPESA</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>CFF</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Not Applicable</Value>
+      <Value>No</Value>
+      <Value>Station</Value>
+    </Testcase>
+    <Testcase TCNo="115">
+      <Value>116</Value>
+      <Value>MC</Value>
+      <Value>Asia Pacific</Value>
+      <Value>Africa</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX Interline</Value>
+      <Value>Premium</Value>
+      <Value>6</Value>
+      <Value>Open</Value>
+      <Value>2A 1C 1I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Ignore</Value>
+      <Value>Guest</Value>
+      <Value>Pay Later</Value>
+      <Value>Later</Value>
+      <Value>Country</Value>
+      <Value>CFF</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Not Applicable</Value>
+      <Value>No</Value>
+      <Value>Region</Value>
+    </Testcase>
+    <Testcase TCNo="116">
+      <Value>117</Value>
+      <Value>MC</Value>
+      <Value>North America</Value>
+      <Value>Middle East</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX Interline</Value>
+      <Value>Not Premium</Value>
+      <Value>1</Value>
+      <Value>Closed</Value>
+      <Value>5A 4C 5I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Select</Value>
+      <Value>Guest</Value>
+      <Value>Pay Later</Value>
+      <Value>Later</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Not Applicable</Value>
+      <Value>Yes</Value>
+      <Value>Region</Value>
+    </Testcase>
+    <Testcase TCNo="117">
+      <Value>118</Value>
+      <Value>MC</Value>
+      <Value>South America</Value>
+      <Value>North America</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX Only</Value>
+      <Value>Premium</Value>
+      <Value>6</Value>
+      <Value>Closed</Value>
+      <Value>5A 4C 5I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Select</Value>
+      <Value>Guest</Value>
+      <Value>Pay Later</Value>
+      <Value>Later</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>CFF</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Not Applicable</Value>
+      <Value>Yes</Value>
+      <Value>Region</Value>
+    </Testcase>
+    <Testcase TCNo="118">
+      <Value>119</Value>
+      <Value>MC</Value>
+      <Value>North America</Value>
+      <Value>Middle East</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX One World</Value>
+      <Value>Premium</Value>
+      <Value>1</Value>
+      <Value>Open</Value>
+      <Value>2A 2I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Ignore</Value>
+      <Value>Guest</Value>
+      <Value>Pay Later</Value>
+      <Value>Later</Value>
+      <Value>Station</Value>
+      <Value>CFF</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Not Applicable</Value>
+      <Value>Yes</Value>
+      <Value>Country</Value>
+    </Testcase>
+    <Testcase TCNo="119">
+      <Value>120</Value>
+      <Value>MC</Value>
+      <Value>South America</Value>
+      <Value>Middle East</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX Code Share</Value>
+      <Value>Not Premium</Value>
+      <Value>6</Value>
+      <Value>Closed</Value>
+      <Value>1A 0C 0I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Ignore</Value>
+      <Value>Guest</Value>
+      <Value>Pay Later</Value>
+      <Value>Later</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Not Applicable</Value>
+      <Value>Yes</Value>
+      <Value>Country</Value>
+    </Testcase>
+    <Testcase TCNo="120">
+      <Value>121</Value>
+      <Value>MC</Value>
+      <Value>Africa</Value>
+      <Value>Asia Pacific</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX Only</Value>
+      <Value>Premium</Value>
+      <Value>6</Value>
+      <Value>Mixed</Value>
+      <Value>5A 4C 5I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Ignore</Value>
+      <Value>Guest</Value>
+      <Value>Pay Later</Value>
+      <Value>MPESA</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>CFF</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Not Applicable</Value>
+      <Value>No</Value>
+      <Value>Global</Value>
+    </Testcase>
+    <Testcase TCNo="121">
+      <Value>122</Value>
+      <Value>MC</Value>
+      <Value>Middle East</Value>
+      <Value>North America</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Not Applicable</Value>
+      <Value>Includes Bus</Value>
+      <Value>Not Premium</Value>
+      <Value>1</Value>
+      <Value>Mixed</Value>
+      <Value>1A 0C 0I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Select</Value>
+      <Value>Guest</Value>
+      <Value>Pay Now</Value>
+      <Value>K-net</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>No</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="122">
+      <Value>123</Value>
+      <Value>MC</Value>
+      <Value>South America</Value>
+      <Value>Middle East</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX Code Share</Value>
+      <Value>Premium</Value>
+      <Value>1</Value>
+      <Value>Mixed</Value>
+      <Value>2A 2I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Select</Value>
+      <Value>FFP</Value>
+      <Value>Pay Now</Value>
+      <Value>Brasbag</Value>
+      <Value>Region</Value>
+      <Value>CFF</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>No</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="123">
+      <Value>124</Value>
+      <Value>MC</Value>
+      <Value>Asia Pacific</Value>
+      <Value>Australia</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX Code Share</Value>
+      <Value>Not Premium</Value>
+      <Value>3</Value>
+      <Value>Open</Value>
+      <Value>2A 2I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Select</Value>
+      <Value>FFP</Value>
+      <Value>Pay Now</Value>
+      <Value>Alipay</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>No</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="124">
+      <Value>125</Value>
+      <Value>MC</Value>
+      <Value>Asia Pacific</Value>
+      <Value>Africa</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX Interline</Value>
+      <Value>Not Premium</Value>
+      <Value>6</Value>
+      <Value>Mixed</Value>
+      <Value>2A 1C 1I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Ignore</Value>
+      <Value>Guest</Value>
+      <Value>Pay Now</Value>
+      <Value>Alipay</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>No</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="125">
+      <Value>126</Value>
+      <Value>MC</Value>
+      <Value>South America</Value>
+      <Value>Asia Pacific</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX Interline</Value>
+      <Value>Premium</Value>
+      <Value>6</Value>
+      <Value>Closed</Value>
+      <Value>2A 2I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Select</Value>
+      <Value>FFP</Value>
+      <Value>Pay Now</Value>
+      <Value>Brasbag</Value>
+      <Value>Country</Value>
+      <Value>CFF</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Yes</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="126">
+      <Value>127</Value>
+      <Value>MC</Value>
+      <Value>European</Value>
+      <Value>Africa</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Not Applicable</Value>
+      <Value>Includes Train</Value>
+      <Value>Premium</Value>
+      <Value>3</Value>
+      <Value>Open</Value>
+      <Value>2A 2I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Ignore</Value>
+      <Value>Guest</Value>
+      <Value>Pay Later</Value>
+      <Value>Later</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Not Applicable</Value>
+      <Value>Yes</Value>
+      <Value>Station</Value>
+    </Testcase>
+    <Testcase TCNo="127">
+      <Value>128</Value>
+      <Value>MC</Value>
+      <Value>North America</Value>
+      <Value>Middle East</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX Interline</Value>
+      <Value>Premium</Value>
+      <Value>3</Value>
+      <Value>Mixed</Value>
+      <Value>2A 1C 1I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Ignore</Value>
+      <Value>FFP</Value>
+      <Value>Pay Later</Value>
+      <Value>Later</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Not Applicable</Value>
+      <Value>No</Value>
+      <Value>Station</Value>
+    </Testcase>
+    <Testcase TCNo="128">
+      <Value>129</Value>
+      <Value>MC</Value>
+      <Value>Australia</Value>
+      <Value>Asia Pacific</Value>
+      <Value>Does Not Satisfy APT (Calendar Shift)</Value>
+      <Value>Not Applicable</Value>
+      <Value>XX Interline</Value>
+      <Value>Premium</Value>
+      <Value>6</Value>
+      <Value>Closed</Value>
+      <Value>2A 1C 1I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Select</Value>
+      <Value>FFP</Value>
+      <Value>Pay Later</Value>
+      <Value>Later</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Not Applicable</Value>
+      <Value>Yes</Value>
+      <Value>Global</Value>
+    </Testcase>
+  </Testset>
+  <Header>
+    <Value />
+    <Value>I_TRIP_TYPE</Value>
+    <Value>I_REGION_FROM</Value>
+    <Value>I_REGION_TO</Value>
+    <Value>I_DEPARTURE</Value>
+    <Value>I_ARRIVAL</Value>
+    <Value>I_ITINERARY</Value>
+    <Value>I_CABIN</Value>
+    <Value>I_NO_OF_SEGMENTS</Value>
+    <Value>I_JAW_TYPE</Value>
+    <Value>I_PAX_COUNT</Value>
+    <Value>I_CABIN_SELECTION</Value>
+    <Value>I_FARE_FAMILY</Value>
+    <Value>I_UPSELL_TEASER</Value>
+    <Value>I_LOGIN</Value>
+    <Value>I_PAYMENT_TYPE</Value>
+    <Value>I_CARD_TYPES</Value>
+    <Value>C_INBOUND_APT</Value>
+    <Value>C_OUTBOUND_APT</Value>
+    <Value>C_PAY_NOW_LATER</Value>
+    <Value>C_TTD_PAY_NOW</Value>
+    <Value>C_TTD_PAY_LATER</Value>
+    <Value>C_BY_PASS_3D</Value>
+    <Value>C_BY_PASS_FRAUD</Value>
+    <Value>C_DISPLAY_TAX</Value>
+    <Value>C_SALES_ENABLED</Value>
+    <Value>C_TICKET_FRAUD_BOOKING</Value>
+    <Value>C_APIS</Value>
+    <Value>C_TTL_PAY_LATER</Value>
+  </Header>
+  <Graph-Data>
+    <Value>0.05637584</Value>
+    <Value>0.111856826</Value>
+    <Value>0.1595824</Value>
+    <Value>0.20447427</Value>
+    <Value>0.24489187</Value>
+    <Value>0.27427292</Value>
+    <Value>0.31096196</Value>
+    <Value>0.3504847</Value>
+    <Value>0.37181208</Value>
+    <Value>0.40119314</Value>
+    <Value>0.42475763</Value>
+    <Value>0.4414616</Value>
+    <Value>0.4580164</Value>
+    <Value>0.47636092</Value>
+    <Value>0.5093214</Value>
+    <Value>0.5307979</Value>
+    <Value>0.549739</Value>
+    <Value>0.5673378</Value>
+    <Value>0.5840418</Value>
+    <Value>0.5982103</Value>
+    <Value>0.61043996</Value>
+    <Value>0.62087995</Value>
+    <Value>0.6337062</Value>
+    <Value>0.6562267</Value>
+    <Value>0.6665175</Value>
+    <Value>0.67501867</Value>
+    <Value>0.6841163</Value>
+    <Value>0.6920209</Value>
+    <Value>0.70082027</Value>
+    <Value>0.7154362</Value>
+    <Value>0.7276659</Value>
+    <Value>0.7437733</Value>
+    <Value>0.753915</Value>
+    <Value>0.7610738</Value>
+    <Value>0.76703954</Value>
+    <Value>0.7727069</Value>
+    <Value>0.7809098</Value>
+    <Value>0.78970915</Value>
+    <Value>0.7961223</Value>
+    <Value>0.8080537</Value>
+    <Value>0.8126771</Value>
+    <Value>0.8161074</Value>
+    <Value>0.81953764</Value>
+    <Value>0.8265473</Value>
+    <Value>0.8334079</Value>
+    <Value>0.83788216</Value>
+    <Value>0.848173</Value>
+    <Value>0.8517524</Value>
+    <Value>0.8551827</Value>
+    <Value>0.85741985</Value>
+    <Value>0.8674124</Value>
+    <Value>0.8759135</Value>
+    <Value>0.88277406</Value>
+    <Value>0.8875466</Value>
+    <Value>0.89649516</Value>
+    <Value>0.89828485</Value>
+    <Value>0.90037286</Value>
+    <Value>0.90425056</Value>
+    <Value>0.9075317</Value>
+    <Value>0.90872484</Value>
+    <Value>0.9097688</Value>
+    <Value>0.91081285</Value>
+    <Value>0.9121551</Value>
+    <Value>0.9131991</Value>
+    <Value>0.9148397</Value>
+    <Value>0.92110366</Value>
+    <Value>0.9278151</Value>
+    <Value>0.9285608</Value>
+    <Value>0.93064874</Value>
+    <Value>0.9324385</Value>
+    <Value>0.9330351</Value>
+    <Value>0.9355705</Value>
+    <Value>0.93616706</Value>
+    <Value>0.93661445</Value>
+    <Value>0.93721104</Value>
+    <Value>0.93855333</Value>
+    <Value>0.94004476</Value>
+    <Value>0.94108874</Value>
+    <Value>0.94183445</Value>
+    <Value>0.9427293</Value>
+    <Value>0.9440716</Value>
+    <Value>0.94451904</Value>
+    <Value>0.945563</Value>
+    <Value>0.947651</Value>
+    <Value>0.94824755</Value>
+    <Value>0.9492916</Value>
+    <Value>0.95376587</Value>
+    <Value>0.957047</Value>
+    <Value>0.95734525</Value>
+    <Value>0.95794183</Value>
+    <Value>0.9610738</Value>
+    <Value>0.96196866</Value>
+    <Value>0.9655481</Value>
+    <Value>0.96778524</Value>
+    <Value>0.9686801</Value>
+    <Value>0.9707681</Value>
+    <Value>0.97300524</Value>
+    <Value>0.9743475</Value>
+    <Value>0.97554064</Value>
+    <Value>0.97688293</Value>
+    <Value>0.9779269</Value>
+    <Value>0.97941834</Value>
+    <Value>0.9806115</Value>
+    <Value>0.9813572</Value>
+    <Value>0.9837435</Value>
+    <Value>0.9843401</Value>
+    <Value>0.98598063</Value>
+    <Value>0.98747206</Value>
+    <Value>0.9888143</Value>
+    <Value>0.9901566</Value>
+    <Value>0.99060404</Value>
+    <Value>0.991648</Value>
+    <Value>0.992692</Value>
+    <Value>0.9932886</Value>
+    <Value>0.9940343</Value>
+    <Value>0.9946309</Value>
+    <Value>0.99522746</Value>
+    <Value>0.99567485</Value>
+    <Value>0.99642056</Value>
+    <Value>0.996868</Value>
+    <Value>0.9974646</Value>
+    <Value>0.99776286</Value>
+    <Value>0.9980611</Value>
+    <Value>0.99835944</Value>
+    <Value>0.9986577</Value>
+    <Value>0.998956</Value>
+    <Value>0.9994034</Value>
+    <Value>0.99970174</Value>
+    <Value>1.0</Value>
+  </Graph-Data>
+  <Stat-Data>
+    <ExecutionTime>2.764</ExecutionTime>
+    <MaxDomainSize>8</MaxDomainSize>
+    <MinDomainSize>2</MinDomainSize>
+    <TotalNoOfCombination>6705</TotalNoOfCombination>
+    <TotalNoOfTests>129</TotalNoOfTests>
+    <Algorithm>IPOG</Algorithm>
+  </Stat-Data>
+</System>
+

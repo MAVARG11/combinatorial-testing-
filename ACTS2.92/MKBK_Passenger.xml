@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<System name="MKBK_Passenger">
+  <Parameters>
+    <Parameter id="0" name="P_Trip_Type" type="1">
+      <values>
+        <value>OW</value>
+        <value>RT</value>
+        <value>MC</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="1" name="P_From" type="1">
+      <values>
+        <value>Africa (JNB CAI ALY)</value>
+        <value>Europe</value>
+        <value>Far East</value>
+        <value>Australia Japan Korea</value>
+        <value>GCC Levant Iran Indian Sub</value>
+        <value>Hub</value>
+        <value>North America</value>
+        <value>South America</value>
+        <value>Multiple Regions</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="2" name="P_To" type="1">
+      <values>
+        <value>Africa</value>
+        <value>Europe</value>
+        <value>Far East</value>
+        <value>Australia Japan Korea</value>
+        <value>GCC Levant Iran Indian Sub</value>
+        <value>Hub</value>
+        <value>North America</value>
+        <value>South America</value>
+        <value>Multiple Regions</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="3" name="P_Departure" type="1">
+      <values>
+        <value>Default Date</value>
+        <value>Maximum Date</value>
+        <value>Random Date Between Min and Max</value>
+        <value>Satisfies Meal APT</value>
+        <value>Do Not Satisfy Meal APT</value>
+        <value>Meal APT Satisfies for Some Flights</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="5" name="P_Cabin_Class" type="1">
+      <values>
+        <value>Non Premium</value>
+        <value>Premium</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="6" name="P_Pax" type="1">
+      <values>
+        <value>Minimum (1A)</value>
+        <value>Maximum (5A 4C 5I)</value>
+        <value>Maximum (9A 9I)</value>
+        <value>Random valid (2A 2C 1I)</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="12" name="P_Itinerary_Type" type="1">
+      <values>
+        <value>5th Freedom</value>
+        <value>XX Only</value>
+        <value>XX + Code Share</value>
+        <value>XX + Oneworld</value>
+        <value>XX + Interline</value>
+        <value>Includes Bus</value>
+        <value>Includes Train</value>
+        <value>Code Share</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="13" name="P_Login" type="1">
+      <values>
+        <value>Guest</value>
+        <value>FFP Single Member</value>
+        <value>FFP Multiple Members</value>
+        <value>Profile ??</value>
+        <value>Social Media ??</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="14" name="C_Meal_Enabled" type="1">
+      <values>
+        <value>Yes</value>
+        <value>~No</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+  <Parameter id="22" name="C_Meal_APT" type="1">
+      <values>
+        <value>Defined</value>
+        <value>Not Defined</value>
+      </values>
+      <basechoices />
+    </Parameter>
+    <Parameter id="15" name="C_APIS" type="1">
+      <values>
+        <value>Single Doc Type Enabled</value>
+        <value>Multiple Doc Types Enabled</value>
+        <value>Multiple Types Enabled for Multiple Destinations</value>
+        <value>~Disabled</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="16" name="C_Promo_Type" type="1">
+      <values>
+        <value>None</value>
+        <value>Age Restricted</value>
+        <value>Visa Restricted</value>
+        <value>Route Restricted</value>
+        <value>Sales Period Defined</value>
+        <value>Travel Period Defined</value>
+        <value>Pax Count Defined</value>
+        <value>Mixed Restrictions</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="17" name="I_Same_Meal" type="1">
+      <values>
+        <value>Same Meal for All Flights</value>
+        <value>Different Meals for Flights</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="18" name="I_Emergency_Contact" type="1">
+      <values>
+        <value>With Emergency Contact</value>
+        <value>Without Emergency Contact</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="19" name="I_Privilege_Member_Update" type="1">
+      <values>
+        <value>Update</value>
+        <value>Do Not Update</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="20" name="I_QBIZ" type="1">
+      <values>
+        <value>Not Provided</value>
+        <value>Correct QBIZ</value>
+        <value>~Incorrect QBIZ</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="21" name="I_Actions" type="1">
+      <values>
+        <value>Next Passenger</value>
+        <value>Continue with completed</value>
+        <value>Trip Summary</value>
+        <value>~Continue with partially completed</value>
+      </values>
+      <basechoices />
+    </Parameter>  
+  </Parameters>
+  <OutputParameters />
+  <Relations />
+  <Constraints>
+    <Constraint text="(P_Trip_Type = &quot;MC&quot;) =&gt; (P_From = &quot;Multiple Regions&quot; &amp;&amp; P_To =&quot;Multiple Regions&quot;)">
+      <Parameters>
+        <Parameter name="P_Trip_Type" />
+        <Parameter name="P_From" />
+        <Parameter name="P_To" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(P_From = &quot;Multiple Regions&quot; || P_To =&quot;Multiple Regions&quot;) =&gt; (P_Trip_Type = &quot;MC&quot;)">
+      <Parameters>
+        <Parameter name="P_From" />
+        <Parameter name="P_To" />
+        <Parameter name="P_Trip_Type" />
+      </Parameters>
+    </Constraint>
+  </Constraints>
+  <Testset doi="1">
+    <Testcase TCNo="0">
+      <Value>1</Value>
+      <Value>RT</Value>
+      <Value>Africa (JNB CAI ALY)</Value>
+      <Value>Europe</Value>
+      <Value>Maximum Date</Value>
+      <Value>Premium</Value>
+      <Value>Maximum (5A 4C 5I)</Value>
+      <Value>XX Only</Value>
+      <Value>FFP Single Member</Value>
+      <Value>~No</Value>
+      <Value>Multiple Doc Types Enabled</Value>
+      <Value>Age Restricted</Value>
+      <Value>Different Meals for Flights</Value>
+      <Value>Without Emergency Contact</Value>
+      <Value>Do Not Update</Value>
+      <Value>Correct QBIZ</Value>
+      <Value>Continue with completed</Value>
+      <Value>Not Defined</Value>
+    </Testcase>
+    <Testcase TCNo="1">
+      <Value>2</Value>
+      <Value>OW</Value>
+      <Value>Europe</Value>
+      <Value>Far East</Value>
+      <Value>Random Date Between Min and Max</Value>
+      <Value>Non Premium</Value>
+      <Value>Maximum (9A 9I)</Value>
+      <Value>XX + Code Share</Value>
+      <Value>FFP Multiple Members</Value>
+      <Value>Yes</Value>
+      <Value>Multiple Types Enabled for Multiple Destinations</Value>
+      <Value>Visa Restricted</Value>
+      <Value>Same Meal for All Flights</Value>
+      <Value>With Emergency Contact</Value>
+      <Value>Update</Value>
+      <Value>~Incorrect QBIZ</Value>
+      <Value>Trip Summary</Value>
+      <Value>Defined</Value>
+    </Testcase>
+    <Testcase TCNo="2">
+      <Value>3</Value>
+      <Value>OW</Value>
+      <Value>Far East</Value>
+      <Value>Australia Japan Korea</Value>
+      <Value>Satisfies Meal APT</Value>
+      <Value>Premium</Value>
+      <Value>Random valid (2A 2C 1I)</Value>
+      <Value>XX + Oneworld</Value>
+      <Value>Profile ??</Value>
+      <Value>Yes</Value>
+      <Value>~Disabled</Value>
+      <Value>Route Restricted</Value>
+      <Value>Different Meals for Flights</Value>
+      <Value>Without Emergency Contact</Value>
+      <Value>Update</Value>
+      <Value>Not Provided</Value>
+      <Value>~Continue with partially completed</Value>
+      <Value>Not Defined</Value>
+    </Testcase>
+    <Testcase TCNo="3">
+      <Value>4</Value>
+      <Value>OW</Value>
+      <Value>Australia Japan Korea</Value>
+      <Value>GCC Levant Iran Indian Sub</Value>
+      <Value>Do Not Satisfy Meal APT</Value>
+      <Value>Premium</Value>
+      <Value>Minimum (1A)</Value>
+      <Value>XX + Interline</Value>
+      <Value>Social Media ??</Value>
+      <Value>Yes</Value>
+      <Value>Single Doc Type Enabled</Value>
+      <Value>Sales Period Defined</Value>
+      <Value>Same Meal for All Flights</Value>
+      <Value>With Emergency Contact</Value>
+      <Value>Do Not Update</Value>
+      <Value>Not Provided</Value>
+      <Value>Next Passenger</Value>
+      <Value>Not Defined</Value>
+    </Testcase>
+    <Testcase TCNo="4">
+      <Value>5</Value>
+      <Value>RT</Value>
+      <Value>GCC Levant Iran Indian Sub</Value>
+      <Value>Hub</Value>
+      <Value>Meal APT Satisfies for Some Flights</Value>
+      <Value>Non Premium</Value>
+      <Value>Random valid (2A 2C 1I)</Value>
+      <Value>Includes Bus</Value>
+      <Value>Guest</Value>
+      <Value>Yes</Value>
+      <Value>~Disabled</Value>
+      <Value>Travel Period Defined</Value>
+      <Value>Same Meal for All Flights</Value>
+      <Value>Without Emergency Contact</Value>
+      <Value>Update</Value>
+      <Value>Not Provided</Value>
+      <Value>Next Passenger</Value>
+      <Value>Defined</Value>
+    </Testcase>
+    <Testcase TCNo="5">
+      <Value>6</Value>
+      <Value>OW</Value>
+      <Value>Hub</Value>
+      <Value>North America</Value>
+      <Value>Default Date</Value>
+      <Value>Non Premium</Value>
+      <Value>Minimum (1A)</Value>
+      <Value>Includes Train</Value>
+      <Value>FFP Multiple Members</Value>
+      <Value>Yes</Value>
+      <Value>~Disabled</Value>
+      <Value>Pax Count Defined</Value>
+      <Value>Different Meals for Flights</Value>
+      <Value>Without Emergency Contact</Value>
+      <Value>Do Not Update</Value>
+      <Value>~Incorrect QBIZ</Value>
+      <Value>Trip Summary</Value>
+      <Value>Not Defined</Value>
+    </Testcase>
+    <Testcase TCNo="6">
+      <Value>7</Value>
+      <Value>RT</Value>
+      <Value>North America</Value>
+      <Value>South America</Value>
+      <Value>Meal APT Satisfies for Some Flights</Value>
+      <Value>Non Premium</Value>
+      <Value>Maximum (9A 9I)</Value>
+      <Value>Code Share</Value>
+      <Value>Guest</Value>
+      <Value>~No</Value>
+      <Value>~Disabled</Value>
+      <Value>Mixed Restrictions</Value>
+      <Value>Same Meal for All Flights</Value>
+      <Value>Without Emergency Contact</Value>
+      <Value>Do Not Update</Value>
+      <Value>Correct QBIZ</Value>
+      <Value>Trip Summary</Value>
+      <Value>Not Defined</Value>
+    </Testcase>
+    <Testcase TCNo="7">
+      <Value>8</Value>
+      <Value>RT</Value>
+      <Value>South America</Value>
+      <Value>Africa</Value>
+      <Value>Do Not Satisfy Meal APT</Value>
+      <Value>Premium</Value>
+      <Value>Maximum (9A 9I)</Value>
+      <Value>5th Freedom</Value>
+      <Value>Profile ??</Value>
+      <Value>~No</Value>
+      <Value>Single Doc Type Enabled</Value>
+      <Value>None</Value>
+      <Value>Same Meal for All Flights</Value>
+      <Value>With Emergency Contact</Value>
+      <Value>Update</Value>
+      <Value>Correct QBIZ</Value>
+      <Value>Next Passenger</Value>
+      <Value>Defined</Value>
+    </Testcase>
+    <Testcase TCNo="8">
+      <Value>9</Value>
+      <Value>MC</Value>
+      <Value>Multiple Regions</Value>
+      <Value>Multiple Regions</Value>
+      <Value>Do Not Satisfy Meal APT</Value>
+      <Value>Premium</Value>
+      <Value>Maximum (9A 9I)</Value>
+      <Value>XX + Code Share</Value>
+      <Value>FFP Multiple Members</Value>
+      <Value>~No</Value>
+      <Value>Multiple Doc Types Enabled</Value>
+      <Value>None</Value>
+      <Value>Different Meals for Flights</Value>
+      <Value>Without Emergency Contact</Value>
+      <Value>Do Not Update</Value>
+      <Value>~Incorrect QBIZ</Value>
+      <Value>~Continue with partially completed</Value>
+      <Value>Not Defined</Value>
+    </Testcase>
+  </Testset>
+  <Header>
+    <Value />
+    <Value>P_TRIP_TYPE</Value>
+    <Value>P_FROM</Value>
+    <Value>P_TO</Value>
+    <Value>P_DEPARTURE</Value>
+    <Value>P_CABIN_CLASS</Value>
+    <Value>P_PAX</Value>
+    <Value>P_ITINERARY_TYPE</Value>
+    <Value>P_LOGIN</Value>
+    <Value>C_MEAL_ENABLED</Value>
+    <Value>C_APIS</Value>
+    <Value>C_PROMO_TYPE</Value>
+    <Value>I_SAME_MEAL</Value>
+    <Value>I_EMERGENCY_CONTACT</Value>
+    <Value>I_PRIVILEGE_MEMBER_UPDATE</Value>
+    <Value>I_QBIZ</Value>
+    <Value>I_ACTIONS</Value>
+    <Value>C_MEAL_APT</Value>
+  </Header>
+  <Stat-Data>
+    <ExecutionTime>0.046</ExecutionTime>
+    <MaxDomainSize>9</MaxDomainSize>
+    <MinDomainSize>2</MinDomainSize>
+    <TotalNoOfCombination>75</TotalNoOfCombination>
+    <TotalNoOfTests>9</TotalNoOfTests>
+    <Algorithm>IPOG</Algorithm>
+  </Stat-Data>
+</System>
+

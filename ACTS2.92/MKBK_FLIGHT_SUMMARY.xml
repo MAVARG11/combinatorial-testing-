@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<System name="MKBK_FLIGHT_SUMMARY">
+  <Parameters>
+    <Parameter id="0" name="I_Trip_Type" type="1">
+      <values>
+        <value>OW</value>
+        <value>RT</value>
+        <value>MC</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="2" name="I_Alliance" type="1">
+      <values>
+        <value>XX Only</value>
+        <value>Code Share</value>
+        <value>Interline</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="3" name="I_Log_In" type="1">
+      <values>
+        <value>FFP</value>
+        <value>Guest</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="4" name="I_Conn_Type" type="1">
+      <values>
+        <value>Direct</value>
+        <value>Single Conn</value>
+        <value>Multiple Conn</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="5" name="I_Pax_Type" type="1">
+      <values>
+        <value>ADT + CHD</value>
+        <value>ADT + INF</value>
+        <value>ADT</value>
+        <value>nADT + nCHD</value>
+        <value>nADT</value>
+        <value>nADT + nCHD + nINF</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="7" name="C_Services" type="1">
+      <values>
+        <value>Bus</value>
+        <value>Railway</value>
+        <value>No Bus/Railway defined</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="11" name="I_Fare_Family" type="1">
+      <values>
+        <value>Economy</value>
+        <value>Business</value>
+        <value>First</value>
+        <value>Ecomony with upsel teaser configured</value>
+        <value>Business With upsell teaser configured</value>
+        <value>First with upsell teaser configured</value>
+        <value>Fares of multiple cabin classes</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="13" name="I_Destination" type="1">
+      <values>
+        <value>Western_Europe_LHR</value>
+        <value>South_America_Brazil</value>
+        <value>Middle_East_DXB</value>
+        <value>CMB_DOH/DOH_LHR/BKK_DOH</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="14" name="I_Cabin_Class" type="1">
+      <values>
+        <value>Premium</value>
+        <value>Non Premium</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="15" name="C_OTP" type="1">
+      <values>
+        <value>Display OTP</value>
+        <value>Not Display OTP</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="16" name="I_Origin" type="1">
+      <values>
+        <value>South Asia_CMB</value>
+        <value>Hub_Doha</value>
+        <value>CMB_DOH/DOH_LHR/BKK_DOH</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="17" name="I_Actions" type="1">
+      <values>
+        <value>Click Modify Search button</value>
+        <value>Click Upsell</value>
+        <value>Click Fare Quote</value>
+        <value>Click Continue</value>
+        <value>Click Upsell and Continue</value>
+      </values>
+      <basechoices />
+    </Parameter>
+  </Parameters>
+  <OutputParameters />
+  <Relations />
+  <Constraints>
+    <Constraint text="(I_Cabin_Class = &quot;Premium&quot; ) =&gt; (I_Fare_Family =&quot;Business&quot; || I_Fare_Family =&quot;First&quot; || I_Fare_Family =&quot;Business With upsell teaser configured&quot; || I_Fare_Family = &quot;First with upsell teaser configured&quot;)">
+      <Parameters>
+        <Parameter name="I_Cabin_Class" />
+        <Parameter name="I_Fare_Family" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Conn_Type =&quot;Direct&quot;) =&gt; (I_Origin =&quot;Hub_Doha&quot;)">
+      <Parameters>
+        <Parameter name="I_Conn_Type" />
+        <Parameter name="I_Origin" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(C_OTP = &quot;Display OTP&quot;) =&gt; (I_Destination = &quot;South_America_Brazil&quot;)">
+      <Parameters>
+        <Parameter name="C_OTP" />
+        <Parameter name="I_Destination" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Destination = &quot;South_America_Brazil&quot;) =&gt; (C_OTP =&quot;Display OTP&quot;)">
+      <Parameters>
+        <Parameter name="I_Destination" />
+        <Parameter name="C_OTP" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Alliance = &quot;Interline&quot;) =&gt; (I_Conn_Type = &quot;Single Conn&quot; || I_Conn_Type =&quot;Multiple Conn&quot;)">
+      <Parameters>
+        <Parameter name="I_Alliance" />
+        <Parameter name="I_Conn_Type" />
+        <Parameter name="I_Conn_Type" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Trip_Type =&quot;MC&quot;) =&gt; (I_Origin =&quot;CMB_DOH/DOH_LHR/BKK_DOH&quot;&amp;&amp; I_Destination =&quot;CMB_DOH/DOH_LHR/BKK_DOH&quot;)">
+      <Parameters>
+        <Parameter name="I_Trip_Type" />
+        <Parameter name="I_Origin" />
+        <Parameter name="I_Destination" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Origin = &quot;CMB_DOH/DOH_LHR/BKK_DOH&quot;) =&gt; (I_Destination = &quot;CMB_DOH/DOH_LHR/BKK_DOH&quot;)">
+      <Parameters>
+        <Parameter name="I_Origin" />
+        <Parameter name="I_Destination" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Destination =&quot;CMB_DOH/DOH_LHR/BKK_DOH&quot;) =&gt;(I_Origin = &quot;CMB_DOH/DOH_LHR/BKK_DOH&quot;)">
+      <Parameters>
+        <Parameter name="I_Destination" />
+        <Parameter name="I_Origin" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="&#xD;&#xA;(I_Origin =&quot;CMB_DOH/DOH_LHR/BKK_DOH&quot;&amp;&amp; I_Destination =&quot;CMB_DOH/DOH_LHR/BKK_DOH&quot;) =&gt; (I_Trip_Type =&quot;MC&quot;) ">
+      <Parameters>
+        <Parameter name="I_Origin" />
+        <Parameter name="I_Destination" />
+        <Parameter name="I_Trip_Type" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Actions = &quot;Click Upsell&quot;) =&gt; (I_Fare_Family = &quot;Ecomony with upsel teaser configured&quot; || I_Fare_Family =&quot;Business With upsell teaser configured&quot; || I_Fare_Family = &quot;First with upsell teaser configured&quot;)">
+      <Parameters>
+        <Parameter name="I_Actions" />
+        <Parameter name="I_Fare_Family" />
+        <Parameter name="I_Fare_Family" />
+        <Parameter name="I_Fare_Family" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Actions = &quot;Click Upsell and Continue&quot;) =&gt; (I_Fare_Family = &quot;Ecomony with upsel teaser configured&quot; || I_Fare_Family =&quot;Business With upsell teaser configured&quot; || I_Fare_Family = &quot;First with upsell teaser configured&quot;)">
+      <Parameters>
+        <Parameter name="I_Actions" />
+        <Parameter name="I_Fare_Family" />
+        <Parameter name="I_Fare_Family" />
+        <Parameter name="I_Fare_Family" />
+      </Parameters>
+    </Constraint>
+  </Constraints>
+</System>
+

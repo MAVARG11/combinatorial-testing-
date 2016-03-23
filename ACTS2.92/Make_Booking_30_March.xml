@@ -1,0 +1,988 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<System name="Make_Booking">
+  <Parameters>
+    <Parameter id="0" name="I_Trip_Type" type="1">
+      <values>
+        <value>OW</value>
+        <value>MC</value>
+        <value>RT</value>
+        <value>RT2</value>
+      </values>
+      <basechoices>
+        <basechoice>RT</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="1" name="I_Region_From" type="1">
+      <values>
+        <value>Africa</value>
+        <value>European</value>
+        <value>Middle East</value>
+        <value>Australia</value>
+        <value>Asia Pacific</value>
+        <value>Hub</value>
+        <value>North America</value>
+        <value>South America</value>
+      </values>
+      <basechoices>
+        <basechoice>Hub</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="2" name="I_Region_To" type="1">
+      <values>
+        <value>Africa</value>
+        <value>European</value>
+        <value>Middle East</value>
+        <value>Australia</value>
+        <value>Asia Pacific</value>
+        <value>Hub</value>
+        <value>North America</value>
+        <value>South America</value>
+      </values>
+      <basechoices>
+        <basechoice>Middle East</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="38" name="I_Departure" type="1">
+      <values>
+        <value>Satisfies APT</value>
+        <value>Date Not Satisfying:Weekly Satisfying</value>
+        <value>Date Not Satisfying:Weekly Not Satisfying</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="39" name="I_Arrival" type="1">
+      <values>
+        <value>Satisfies APT</value>
+        <value>Date Not Satisfying:Weekly Satisfying</value>
+        <value>Date Not Satisfying:Weekly Not Satisfying</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="4" name="I_Itinerary" type="1">
+      <values>
+        <value>5th Freedom</value>
+        <value>XX Only</value>
+        <value>XX Code Share</value>
+        <value>XX One World</value>
+        <value>XX Interline</value>
+        <value>Includes Train</value>
+        <value>Includes Bus</value>
+      </values>
+      <basechoices>
+        <basechoice>XX Only</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="9" name="I_Cabin" type="1">
+      <values>
+        <value>Not Premium</value>
+        <value>Premium</value>
+      </values>
+      <basechoices>
+        <basechoice>Premium</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="10" name="I_No_Of_Segments" type="1">
+      <values>
+        <value>1</value>
+        <value>3</value>
+        <value>6</value>
+        <value>Not Applicable</value>
+      </values>
+      <basechoices>
+        <basechoice>Not Applicable</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="11" name="I_Jaw_Type" type="1">
+      <values>
+        <value>Open</value>
+        <value>Closed</value>
+        <value>Mixed</value>
+        <value>Not Applicable</value>
+      </values>
+      <basechoices>
+        <basechoice>Not Applicable</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="13" name="I_Pax_Count" type="1">
+      <values>
+        <value>1A 0C 0I</value>
+        <value>2A 1C 1I</value>
+        <value>2A 2I</value>
+        <value>5A 4C 5I</value>
+        <value>9A 9C 9I</value>
+      </values>
+      <basechoices>
+        <basechoice>2A 1C 1I</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="14" name="I_Cabin_Selection" type="1">
+      <values>
+        <value>Same Cabin</value>
+        <value>Mix Cabin</value>
+      </values>
+      <basechoices>
+        <basechoice>Same Cabin</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="15" name="I_Fare_Family" type="1">
+      <values>
+        <value>Global Promo</value>
+        <value>Restricted</value>
+        <value>Semi Flexible</value>
+        <value>Fully Flexible</value>
+        <value>Proactive</value>
+        <value>Reactive</value>
+        <value>Ultra</value>
+        <value>Not Applicable</value>
+      </values>
+      <basechoices>
+        <basechoice>Semi Flexible</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="16" name="I_STPC" type="1">
+      <values>
+        <value>Not Eligible</value>
+        <value>Eligible for complimentary</value>
+        <value>Eligible for paid</value>
+      </values>
+      <basechoices>
+        <basechoice>Not Eligible</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="17" name="I_Visa" type="1">
+      <values>
+        <value>Eligible for XX</value>
+        <value>Not Eligible for XX</value>
+        <value>Eligible for UAE</value>
+        <value>Not Eligible for UAE</value>
+        <value>Eligible for both</value>
+        <value>Not Eligible for both</value>
+      </values>
+      <basechoices>
+        <basechoice>Not Eligible for both</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="18" name="I_Upsell_Teaser" type="1">
+      <values>
+        <value>Select</value>
+        <value>Ignore</value>
+      </values>
+      <basechoices>
+        <basechoice>Ignore</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="19" name="I_Login" type="1">
+      <values>
+        <value>Guest</value>
+        <value>Profile</value>
+        <value>Social</value>
+        <value>FFP</value>
+      </values>
+      <basechoices>
+        <basechoice>Guest</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="21" name="I_QBIZ" type="2">
+      <values>
+        <value>true</value>
+        <value>false</value>
+      </values>
+      <basechoices>
+        <basechoice>false</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="22" name="I_Payment_Type" type="1">
+      <values>
+        <value>Pay Now</value>
+        <value>Pay Later</value>
+      </values>
+      <basechoices>
+        <basechoice>Pay Now</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="23" name="I_Card_Types" type="1">
+      <values>
+        <value>Alipay</value>
+        <value>BankMellat</value>
+        <value>MPESA</value>
+        <value>Credit Cards</value>
+        <value>Later</value>
+        <value>K-net</value>
+        <value>Brasbag</value>
+      </values>
+      <basechoices>
+        <basechoice>Visa</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="24" name="C_Inbound_APT" type="1">
+      <values>
+        <value>Global</value>
+        <value>Region</value>
+        <value>Country</value>
+        <value>Station</value>
+      </values>
+      <basechoices>
+        <basechoice>Station</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="25" name="C_Outbound_APT" type="1">
+      <values>
+        <value>CFF</value>
+        <value>Global</value>
+        <value>Region</value>
+        <value>Country</value>
+        <value>Station</value>
+      </values>
+      <basechoices>
+        <basechoice>Station</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="26" name="C_Pay_Now_Later" type="1">
+      <values>
+        <value>CFF</value>
+        <value>Global</value>
+        <value>Region</value>
+        <value>Country</value>
+        <value>Station</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="28" name="C_TTD_Pay_Now" type="1">
+      <values>
+        <value>Global</value>
+        <value>Region</value>
+        <value>Country</value>
+        <value>Station</value>
+      </values>
+      <basechoices>
+        <basechoice>Station</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="29" name="C_TTD_Pay_Later" type="1">
+      <values>
+        <value>Global</value>
+        <value>Region</value>
+        <value>Country</value>
+        <value>Station</value>
+      </values>
+      <basechoices>
+        <basechoice>Station</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="30" name="C_By_Pass_3D" type="1">
+      <values>
+        <value>Global</value>
+        <value>Region</value>
+        <value>Country</value>
+        <value>Station</value>
+        <value>Not Applicable</value>
+      </values>
+      <basechoices>
+        <basechoice>Station</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="31" name="C_By_Pass_Fraud" type="1">
+      <values>
+        <value>Global</value>
+        <value>Region</value>
+        <value>Country</value>
+        <value>Station</value>
+        <value>Not Applicable</value>
+      </values>
+      <basechoices>
+        <basechoice>Station</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="35" name="C_Display_Tax" type="1">
+      <values>
+        <value>Global</value>
+        <value>Region</value>
+        <value>Country</value>
+        <value>Station</value>
+      </values>
+      <basechoices>
+        <basechoice>Station</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="36" name="C_Sales_Enabled" type="1">
+      <values>
+        <value>Global</value>
+        <value>Region</value>
+        <value>Country</value>
+        <value>Station</value>
+      </values>
+      <basechoices>
+        <basechoice>Station</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="37" name="C_Ticket_Fraud_Booking" type="1">
+      <values>
+        <value>Global</value>
+        <value>Region</value>
+        <value>Country</value>
+        <value>Station</value>
+        <value>Not Applicable</value>
+      </values>
+      <basechoices>
+        <basechoice>Station</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="40" name="C_APIS" type="1">
+      <values>
+        <value>Global</value>
+        <value>Region</value>
+        <value>Country</value>
+        <value>Station</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="41" name="C_TTL_Pay_Later" type="1">
+      <values>
+        <value>Global</value>
+        <value>Region</value>
+        <value>Country</value>
+        <value>Station</value>
+        <value>Not Applicable</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+  </Parameters>
+  <OutputParameters />
+  <Relations>
+    <Relation Strength="3" Default="false">
+      <Parameter name="I_Trip_Type">
+        <value>OW</value>
+        <value>MC</value>
+        <value>RT</value>
+        <value>RT2</value>
+      </Parameter>
+      <Parameter name="I_No_Of_Segments">
+        <value>1</value>
+        <value>3</value>
+        <value>6</value>
+        <value>Not Applicable</value>
+      </Parameter>
+      <Parameter name="I_Jaw_Type">
+        <value>Open</value>
+        <value>Closed</value>
+        <value>Mixed</value>
+        <value>Not Applicable</value>
+      </Parameter>
+    </Relation>
+    <Relation Strength="2" Default="false">
+      <Parameter name="C_By_Pass_Fraud">
+        <value>Global</value>
+        <value>Region</value>
+        <value>Country</value>
+        <value>Station</value>
+        <value>Not Applicable</value>
+      </Parameter>
+      <Parameter name="C_Ticket_Fraud_Booking">
+        <value>Global</value>
+        <value>Region</value>
+        <value>Country</value>
+        <value>Station</value>
+        <value>Not Applicable</value>
+      </Parameter>
+    </Relation>
+  </Relations>
+  <Constraints>
+    <Constraint text="(I_Region_From != &quot;Middle East&quot;) =&gt; (I_Region_From != I_Region_To )">
+      <Parameters>
+        <Parameter name="I_Region_From" />
+        <Parameter name="I_Region_To" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Itinerary = &quot;Includes Train&quot;) =&gt; (I_Region_From = &quot;European&quot; || I_Region_To = &quot;European&quot;)">
+      <Parameters>
+        <Parameter name="I_Itinerary" />
+        <Parameter name="I_Region_From" />
+        <Parameter name="I_Region_To" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Itinerary = &quot;Includes Bus&quot;) =&gt; (I_Region_From =&quot;Middle East&quot; || I_Region_To = &quot;Middle East&quot;)">
+      <Parameters>
+        <Parameter name="I_Itinerary" />
+        <Parameter name="I_Region_From" />
+        <Parameter name="I_Region_To" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Trip_Type !=&quot;MC&quot;) =&gt; (I_No_Of_Segments = &quot;Not Applicable&quot; )">
+      <Parameters>
+        <Parameter name="I_Trip_Type" />
+        <Parameter name="I_No_Of_Segments" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Trip_Type =&quot;MC&quot;) =&gt; (I_No_Of_Segments != &quot;Not Applicable&quot; )">
+      <Parameters>
+        <Parameter name="I_Trip_Type" />
+        <Parameter name="I_No_Of_Segments" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Trip_Type = &quot;MC&quot;) =&gt; (I_Jaw_Type = &quot;Open&quot; || I_Jaw_Type = &quot;Closed&quot; || I_Jaw_Type = &quot;Mixed&quot;)">
+      <Parameters>
+        <Parameter name="I_Trip_Type" />
+        <Parameter name="I_Jaw_Type" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Trip_Type != &quot;MC&quot;) =&gt; (I_Jaw_Type = &quot;Not Applicable&quot;)">
+      <Parameters>
+        <Parameter name="I_Trip_Type" />
+        <Parameter name="I_Jaw_Type" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Cabin = &quot;Premium&quot;) =&gt; (I_Fare_Family = &quot;Global Promo&quot; ) || (I_Fare_Family = &quot;Restricted&quot;) || (I_Fare_Family = &quot;Semi Flexible&quot; ) || (I_Fare_Family = &quot;Fully Flexible&quot; )">
+      <Parameters>
+        <Parameter name="I_Cabin" />
+        <Parameter name="I_Fare_Family" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_STPC = &quot;Eligible for complimentary&quot;) =&gt; (I_Itinerary = &quot;5th Freedom&quot; || I_Itinerary = &quot;XX Only&quot;) ">
+      <Parameters>
+        <Parameter name="I_STPC" />
+        <Parameter name="I_Itinerary" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Departure =&quot;Date Not Satisfying:Weekly Not Satisfying&quot; || I_Arrival =&quot;Date Not Satisfying:Weekly Not Satisfying&quot; ) =&gt; (I_Trip_Type = &quot;OW&quot; &amp;&amp; I_Region_From = &quot;Middle East&quot; &amp;&amp; I_Region_To = &quot;Middle East&quot; &amp;&amp; I_Cabin = &quot;Premium&quot; &amp;&amp; I_Payment_Type = &quot;Pay Later&quot;)">
+      <Parameters>
+        <Parameter name="I_Departure" />
+        <Parameter name="I_Arrival" />
+        <Parameter name="I_Trip_Type" />
+        <Parameter name="I_Region_From" />
+        <Parameter name="I_Region_To" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Payment_Type =&quot;Pay Later&quot;) =&gt; (I_Card_Types = &quot;Later&quot; || I_Card_Types = &quot;MPESA&quot;)">
+      <Parameters>
+        <Parameter name="I_Payment_Type" />
+        <Parameter name="I_Card_Types" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_STPC = &quot;Eligible for complimentary&quot;) =&gt; (I_Visa = &quot;Eligible for XX&quot;)">
+      <Parameters>
+        <Parameter name="I_STPC" />
+        <Parameter name="I_Visa" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Region_From = &quot;Middle East&quot; &amp;&amp; I_Region_To = &quot;Middle East&quot;) =&gt; (I_STPC = &quot;Not Eligible&quot;)">
+      <Parameters>
+        <Parameter name="I_Region_From" />
+        <Parameter name="I_Region_To" />
+        <Parameter name="I_STPC" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Payment_Type = &quot;Pay Now&quot;) =&gt; (C_TTL_Pay_Later = &quot;Not Applicable&quot;)">
+      <Parameters>
+        <Parameter name="I_Payment_Type" />
+        <Parameter name="C_TTL_Pay_Later" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Card_Types = &quot;Brasbag&quot;) =&gt; (I_Region_From = &quot;South America&quot;) ">
+      <Parameters>
+        <Parameter name="I_Card_Types" />
+        <Parameter name="I_Region_To" />
+      </Parameters>
+    </Constraint>
+    <Constraint text=" (I_Card_Types = &quot;BankMellat&quot; || I_Card_Types = &quot;K-net&quot;) =&gt; (I_Region_From = &quot;Middle East&quot;) ">
+      <Parameters>
+        <Parameter name="I_Card_Types" />
+        <Parameter name="I_Region_To" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Card_Types = &quot;Alipay&quot;) =&gt; (I_Region_From = &quot;Asia Pacific&quot;) ">
+      <Parameters>
+        <Parameter name="I_Card_Types" />
+        <Parameter name="I_Region_To" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Card_Types = &quot;MPESA&quot;) =&gt; (I_Region_From = &quot;Africa&quot;) ">
+      <Parameters>
+        <Parameter name="I_Card_Types" />
+        <Parameter name="I_Region_To" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Itinerary = &quot;5th Freedom&quot;) =&gt; (I_Region_To = &quot;South America&quot; || I_Region_To = &quot;Asia Pacific&quot;)">
+      <Parameters>
+        <Parameter name="I_Itinerary" />
+        <Parameter name="I_Region_To" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Trip_Type = &quot;MC&quot;) =&gt; (I_Fare_Family = &quot;Not Applicable&quot;)">
+      <Parameters>
+        <Parameter name="I_Trip_Type" />
+        <Parameter name="I_Fare_Family" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Payment_Type = &quot;Pay Later&quot;) =&gt; (C_By_Pass_3D = &quot;Not Applicable&quot;)">
+      <Parameters>
+        <Parameter name="I_Payment_Type" />
+        <Parameter name="C_By_Pass_3D" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Card_Types = &quot;Later&quot; || I_Card_Types = &quot;MPESA&quot;) =&gt; (I_Payment_Type =&quot;Pay Later&quot;)">
+      <Parameters>
+        <Parameter name="I_Card_Types" />
+        <Parameter name="I_Payment_Type" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Payment_Type = &quot;Pay Later&quot;) =&gt; (C_By_Pass_Fraud = &quot;Not Applicable&quot;)">
+      <Parameters>
+        <Parameter name="I_Payment_Type" />
+        <Parameter name="C_By_Pass_Fraud" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Payment_Type = &quot;Pay Later&quot;) =&gt; (C_Ticket_Fraud_Booking = &quot;Not Applicable&quot;)">
+      <Parameters>
+        <Parameter name="I_Payment_Type" />
+        <Parameter name="C_Ticket_Fraud_Booking" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(C_By_Pass_Fraud = &quot;Not Applicable&quot;) =&gt; (I_Payment_Type = &quot;Pay Later&quot;)">
+      <Parameters>
+        <Parameter name="C_By_Pass_Fraud" />
+        <Parameter name="I_Payment_Type" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(C_Ticket_Fraud_Booking = &quot;Not Applicable&quot;) =&gt; (I_Payment_Type = &quot;Pay Later&quot;)">
+      <Parameters>
+        <Parameter name="C_Ticket_Fraud_Booking" />
+        <Parameter name="I_Payment_Type" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(C_By_Pass_3D = &quot;Not Applicable&quot;) =&gt; (I_Payment_Type = &quot;Pay Later&quot;)">
+      <Parameters>
+        <Parameter name="C_By_Pass_3D" />
+        <Parameter name="I_Payment_Type" />
+      </Parameters>
+    </Constraint>
+  </Constraints>
+  <Testset doi="1">
+    <Testcase TCNo="0">
+      <Value>1</Value>
+      <Value>RT</Value>
+      <Value>Africa</Value>
+      <Value>European</Value>
+      <Value>Date Not Satisfying:Weekly Satisfying</Value>
+      <Value>Date Not Satisfying:Weekly Satisfying</Value>
+      <Value>XX Only</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 1C 1I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Restricted</Value>
+      <Value>Eligible for paid</Value>
+      <Value>Not Eligible for XX</Value>
+      <Value>Ignore</Value>
+      <Value>Profile</Value>
+      <Value>false</Value>
+      <Value>Pay Later</Value>
+      <Value>MPESA</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>Not Applicable</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+    </Testcase>
+    <Testcase TCNo="1">
+      <Value>2</Value>
+      <Value>RT2</Value>
+      <Value>European</Value>
+      <Value>Middle East</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Satisfies APT</Value>
+      <Value>XX Code Share</Value>
+      <Value>Not Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>2A 2I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Semi Flexible</Value>
+      <Value>Not Eligible</Value>
+      <Value>Eligible for UAE</Value>
+      <Value>Select</Value>
+      <Value>Social</Value>
+      <Value>true</Value>
+      <Value>Pay Now</Value>
+      <Value>Credit Cards</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="2">
+      <Value>3</Value>
+      <Value>OW</Value>
+      <Value>Middle East</Value>
+      <Value>Australia</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Date Not Satisfying:Weekly Satisfying</Value>
+      <Value>XX One World</Value>
+      <Value>Not Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>5A 4C 5I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Fully Flexible</Value>
+      <Value>Not Eligible</Value>
+      <Value>Not Eligible for UAE</Value>
+      <Value>Select</Value>
+      <Value>FFP</Value>
+      <Value>false</Value>
+      <Value>Pay Later</Value>
+      <Value>Later</Value>
+      <Value>Station</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Not Applicable</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+    </Testcase>
+    <Testcase TCNo="3">
+      <Value>4</Value>
+      <Value>OW</Value>
+      <Value>Australia</Value>
+      <Value>Asia Pacific</Value>
+      <Value>Date Not Satisfying:Weekly Satisfying</Value>
+      <Value>Date Not Satisfying:Weekly Satisfying</Value>
+      <Value>XX Interline</Value>
+      <Value>Not Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>9A 9C 9I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Proactive</Value>
+      <Value>Not Eligible</Value>
+      <Value>Eligible for both</Value>
+      <Value>Select</Value>
+      <Value>Guest</Value>
+      <Value>false</Value>
+      <Value>Pay Now</Value>
+      <Value>Credit Cards</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="4">
+      <Value>5</Value>
+      <Value>RT2</Value>
+      <Value>Asia Pacific</Value>
+      <Value>Hub</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Date Not Satisfying:Weekly Satisfying</Value>
+      <Value>XX Interline</Value>
+      <Value>Not Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>1A 0C 0I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Reactive</Value>
+      <Value>Not Eligible</Value>
+      <Value>Not Eligible for both</Value>
+      <Value>Select</Value>
+      <Value>Profile</Value>
+      <Value>true</Value>
+      <Value>Pay Now</Value>
+      <Value>Alipay</Value>
+      <Value>Global</Value>
+      <Value>CFF</Value>
+      <Value>CFF</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="5">
+      <Value>6</Value>
+      <Value>RT2</Value>
+      <Value>Hub</Value>
+      <Value>North America</Value>
+      <Value>Date Not Satisfying:Weekly Satisfying</Value>
+      <Value>Satisfies APT</Value>
+      <Value>XX Only</Value>
+      <Value>Not Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>1A 0C 0I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Ultra</Value>
+      <Value>Eligible for complimentary</Value>
+      <Value>Eligible for XX</Value>
+      <Value>Select</Value>
+      <Value>FFP</Value>
+      <Value>false</Value>
+      <Value>Pay Now</Value>
+      <Value>Credit Cards</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="6">
+      <Value>7</Value>
+      <Value>MC</Value>
+      <Value>North America</Value>
+      <Value>South America</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Satisfies APT</Value>
+      <Value>5th Freedom</Value>
+      <Value>Not Premium</Value>
+      <Value>1</Value>
+      <Value>Open</Value>
+      <Value>2A 2I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Eligible for paid</Value>
+      <Value>Eligible for UAE</Value>
+      <Value>Ignore</Value>
+      <Value>Social</Value>
+      <Value>false</Value>
+      <Value>Pay Later</Value>
+      <Value>Later</Value>
+      <Value>Region</Value>
+      <Value>CFF</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Not Applicable</Value>
+      <Value>Global</Value>
+      <Value>Country</Value>
+    </Testcase>
+    <Testcase TCNo="7">
+      <Value>8</Value>
+      <Value>RT2</Value>
+      <Value>South America</Value>
+      <Value>Africa</Value>
+      <Value>Date Not Satisfying:Weekly Satisfying</Value>
+      <Value>Date Not Satisfying:Weekly Satisfying</Value>
+      <Value>XX Only</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>1A 0C 0I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Global Promo</Value>
+      <Value>Not Eligible</Value>
+      <Value>Not Eligible for both</Value>
+      <Value>Select</Value>
+      <Value>Social</Value>
+      <Value>true</Value>
+      <Value>Pay Now</Value>
+      <Value>Brasbag</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="8">
+      <Value>9</Value>
+      <Value>MC</Value>
+      <Value>Middle East</Value>
+      <Value>European</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Includes Train</Value>
+      <Value>Not Premium</Value>
+      <Value>3</Value>
+      <Value>Closed</Value>
+      <Value>9A 9C 9I</Value>
+      <Value>Same Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Eligible</Value>
+      <Value>Eligible for XX</Value>
+      <Value>Ignore</Value>
+      <Value>Guest</Value>
+      <Value>true</Value>
+      <Value>Pay Now</Value>
+      <Value>BankMellat</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="9">
+      <Value>10</Value>
+      <Value>MC</Value>
+      <Value>Middle East</Value>
+      <Value>Hub</Value>
+      <Value>Satisfies APT</Value>
+      <Value>Date Not Satisfying:Weekly Satisfying</Value>
+      <Value>Includes Bus</Value>
+      <Value>Not Premium</Value>
+      <Value>6</Value>
+      <Value>Mixed</Value>
+      <Value>5A 4C 5I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Eligible</Value>
+      <Value>Eligible for UAE</Value>
+      <Value>Ignore</Value>
+      <Value>FFP</Value>
+      <Value>true</Value>
+      <Value>Pay Now</Value>
+      <Value>K-net</Value>
+      <Value>Station</Value>
+      <Value>CFF</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Global</Value>
+      <Value>Region</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Global</Value>
+      <Value>Station</Value>
+      <Value>Station</Value>
+      <Value>Not Applicable</Value>
+    </Testcase>
+    <Testcase TCNo="10">
+      <Value>11</Value>
+      <Value>OW</Value>
+      <Value>Middle East</Value>
+      <Value>Middle East</Value>
+      <Value>Date Not Satisfying:Weekly Not Satisfying</Value>
+      <Value>Date Not Satisfying:Weekly Not Satisfying</Value>
+      <Value>XX Interline</Value>
+      <Value>Premium</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>5A 4C 5I</Value>
+      <Value>Mix Cabin</Value>
+      <Value>Global Promo</Value>
+      <Value>Not Eligible</Value>
+      <Value>Not Eligible for UAE</Value>
+      <Value>Select</Value>
+      <Value>FFP</Value>
+      <Value>false</Value>
+      <Value>Pay Later</Value>
+      <Value>Later</Value>
+      <Value>Station</Value>
+      <Value>CFF</Value>
+      <Value>Country</Value>
+      <Value>Region</Value>
+      <Value>Station</Value>
+      <Value>Not Applicable</Value>
+      <Value>Not Applicable</Value>
+      <Value>Station</Value>
+      <Value>Global</Value>
+      <Value>Not Applicable</Value>
+      <Value>Country</Value>
+      <Value>Station</Value>
+    </Testcase>
+  </Testset>
+  <Header>
+    <Value />
+    <Value>I_TRIP_TYPE</Value>
+    <Value>I_REGION_FROM</Value>
+    <Value>I_REGION_TO</Value>
+    <Value>I_DEPARTURE</Value>
+    <Value>I_ARRIVAL</Value>
+    <Value>I_ITINERARY</Value>
+    <Value>I_CABIN</Value>
+    <Value>I_NO_OF_SEGMENTS</Value>
+    <Value>I_JAW_TYPE</Value>
+    <Value>I_PAX_COUNT</Value>
+    <Value>I_CABIN_SELECTION</Value>
+    <Value>I_FARE_FAMILY</Value>
+    <Value>I_STPC</Value>
+    <Value>I_VISA</Value>
+    <Value>I_UPSELL_TEASER</Value>
+    <Value>I_LOGIN</Value>
+    <Value>I_QBIZ</Value>
+    <Value>I_PAYMENT_TYPE</Value>
+    <Value>I_CARD_TYPES</Value>
+    <Value>C_INBOUND_APT</Value>
+    <Value>C_OUTBOUND_APT</Value>
+    <Value>C_PAY_NOW_LATER</Value>
+    <Value>C_TTD_PAY_NOW</Value>
+    <Value>C_TTD_PAY_LATER</Value>
+    <Value>C_BY_PASS_3D</Value>
+    <Value>C_BY_PASS_FRAUD</Value>
+    <Value>C_DISPLAY_TAX</Value>
+    <Value>C_SALES_ENABLED</Value>
+    <Value>C_TICKET_FRAUD_BOOKING</Value>
+    <Value>C_APIS</Value>
+    <Value>C_TTL_PAY_LATER</Value>
+  </Header>
+  <Stat-Data>
+    <ExecutionTime>5.017</ExecutionTime>
+    <MaxDomainSize>8</MaxDomainSize>
+    <MinDomainSize>2</MinDomainSize>
+    <TotalNoOfCombination>138</TotalNoOfCombination>
+    <TotalNoOfTests>11</TotalNoOfTests>
+    <Algorithm>IPOG</Algorithm>
+  </Stat-Data>
+</System>
+

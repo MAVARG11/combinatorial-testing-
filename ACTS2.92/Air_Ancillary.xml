@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<System name="Air_Ancillary">
+  <Parameters>
+    <Parameter id="0" name="C_Meal_Enabled" type="2">
+      <values>
+        <value>true</value>
+        <value>false</value>
+      </values>
+      <basechoices>
+        <basechoice>true</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="2" name="C_Meal_Status" type="1">
+      <values>
+        <value>All Inactive</value>
+        <value>All Active</value>
+        <value>Some Active</value>
+      </values>
+      <basechoices>
+        <basechoice>All Active</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="15" name="C_Meal_Exception" type="1">
+      <values>
+        <value>Yes</value>
+        <value>No</value>
+        <value>Yes/No</value>
+      </values>
+      <basechoices>
+        <basechoice>No</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="13" name="C_Seat_Enabled" type="2">
+      <values>
+        <value>true</value>
+        <value>false</value>
+      </values>
+      <basechoices>
+        <basechoice>true</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="22" name="C_EXB_Enabled" type="2">
+      <values>
+        <value>true</value>
+        <value>false</value>
+      </values>
+      <basechoices>
+        <basechoice>true</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="23" name="C_FFP_EXB_Enabled" type="2">
+      <values>
+        <value>true</value>
+        <value>false</value>
+      </values>
+      <basechoices>
+        <basechoice>true</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="5" name="I_Route_From" type="1">
+      <values>
+        <value>Hub</value>
+        <value>North_America</value>
+        <value>South_America</value>
+        <value>Africa</value>
+        <value>Europe</value>
+        <value>Middle_East</value>
+        <value>Australia</value>
+        <value>Asia_Pacific</value>
+      </values>
+      <basechoices>
+        <basechoice>Hub</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="6" name="I_Route_To" type="1">
+      <values>
+        <value>Hub</value>
+        <value>North_America</value>
+        <value>South_America</value>
+        <value>Africa</value>
+        <value>Europe</value>
+        <value>India</value>
+        <value>Middle_East</value>
+        <value>Australia</value>
+        <value>Asia_Pacific</value>
+      </values>
+      <basechoices>
+        <basechoice>Middle_East</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="7" name="I_Itinerary_Type" type="1">
+      <values>
+        <value>5th Freedom</value>
+        <value>XX Only</value>
+        <value>XX+Code Share</value>
+        <value>XX + Interline</value>
+        <value>XX + One World</value>
+        <value>Includes Train</value>
+        <value>Includes Bus</value>
+      </values>
+      <basechoices>
+        <basechoice>XX Only</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="8" name="I_Trip_Type" type="1">
+      <values>
+        <value>One way</value>
+        <value>Return</value>
+        <value>MultiCity</value>
+      </values>
+      <basechoices>
+        <basechoice>Return</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="9" name="I_Meal_APT" type="1">
+      <values>
+        <value>Elapsed</value>
+        <value>Not Elapsed</value>
+        <value>Elapsed for some flights</value>
+      </values>
+      <basechoices>
+        <basechoice>Not Elapsed</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="14" name="I_Excess_APT" type="1">
+      <values>
+        <value>Elapsed</value>
+        <value>Not Elapsed</value>
+        <value>Elapsed for Some</value>
+      </values>
+      <basechoices>
+        <basechoice>Not Elapsed</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="12" name="I_Passenger_Type" type="1">
+      <values>
+        <value>1A 0C 0I</value>
+        <value>2A 2C 1I</value>
+        <value>5A 4C 5I</value>
+      </values>
+      <basechoices>
+        <basechoice>2A 2C 1I</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="11" name="I_Connection_Type" type="1">
+      <values>
+        <value>Direct</value>
+        <value>1 Connection</value>
+        <value>2 Connections</value>
+      </values>
+      <basechoices>
+        <basechoice>1 Connection</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="10" name="I_Frequent_Flyer" type="2">
+      <values>
+        <value>true</value>
+        <value>false</value>
+      </values>
+      <basechoices>
+        <basechoice>false</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="19" name="I_Payment_Type" type="1">
+      <values>
+        <value>Cash</value>
+        <value>Qcredits</value>
+        <value>Qmiles</value>
+        <value>Free of charge</value>
+      </values>
+      <basechoices>
+        <basechoice>Cash</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="21" name="I_EXB_Concept" type="1">
+      <values>
+        <value>Pieces</value>
+        <value>Kilos</value>
+        <value>Not Applicable</value>
+      </values>
+      <basechoices>
+        <basechoice>Kilos</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="25" name="I_Booking_Source" type="1">
+      <values>
+        <value>IBE</value>
+        <value>ATO/CTO</value>
+        <value>Contact Centre</value>
+        <value>Travel Agent</value>
+      </values>
+      <basechoices>
+        <basechoice>IBE</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="16" name="I_Booking_Type" type="1">
+      <values>
+        <value>Onhold</value>
+        <value>Waitlisted</value>
+        <value>Standby</value>
+        <value>New</value>
+        <value>Confirmed</value>
+        <value>Partially Confirmed</value>
+        <value>Subject to Availability</value>
+      </values>
+      <basechoices>
+        <basechoice>Confirmed</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="24" name="I_Transaction_Type" type="1">
+      <values>
+        <value>New Meal and/or Seat</value>
+        <value>Change Meal and/or Seat</value>
+        <value>Includes new excess baggage</value>
+        <value>Change flight - PNR with ancillary</value>
+        <value>Change route - PNR with ancillary</value>
+        <value>Cancel PNR- PNR with ancillary</value>
+      </values>
+      <basechoices>
+        <basechoice>New Meal and/or Seat</basechoice>
+        <basechoice>Cancel PNR- PNR with ancillary</basechoice>
+      </basechoices>
+    </Parameter>
+  </Parameters>
+  <OutputParameters />
+  <Relations>
+    <Relation Strength="3" Default="false">
+      <Parameter name="C_Meal_Enabled">
+        <value>true</value>
+        <value>false</value>
+      </Parameter>
+      <Parameter name="C_Meal_Status">
+        <value>All Inactive</value>
+        <value>All Active</value>
+        <value>Some Active</value>
+      </Parameter>
+      <Parameter name="I_Meal_APT">
+        <value>Elapsed</value>
+        <value>Not Elapsed</value>
+        <value>Elapsed for some flights</value>
+      </Parameter>
+      <Parameter name="C_Meal_Exception">
+        <value>Yes</value>
+        <value>No</value>
+        <value>Yes/No</value>
+      </Parameter>
+    </Relation>
+    <Relation Strength="3" Default="false">
+      <Parameter name="I_Excess_APT">
+        <value>Elapsed</value>
+        <value>Not Elapsed</value>
+        <value>Elapsed for Some</value>
+      </Parameter>
+      <Parameter name="I_Payment_Type">
+        <value>Cash</value>
+        <value>Qcredits</value>
+        <value>Qmiles</value>
+        <value>Free of charge</value>
+      </Parameter>
+      <Parameter name="I_EXB_Concept">
+        <value>Pieces</value>
+        <value>Kilos</value>
+        <value>Not Applicable</value>
+      </Parameter>
+      <Parameter name="C_EXB_Enabled">
+        <value>true</value>
+        <value>false</value>
+      </Parameter>
+      <Parameter name="C_FFP_EXB_Enabled">
+        <value>true</value>
+        <value>false</value>
+      </Parameter>
+    </Relation>
+  </Relations>
+  <Constraints>
+    <Constraint text="(I_Itinerary_Type = &quot;Includes Train&quot;) =&gt; (I_Route_From = &quot;Europe&quot; &amp;&amp; I_Route_To = &quot;Europe&quot;)">
+      <Parameters>
+        <Parameter name="I_Itinerary_Type" />
+        <Parameter name="I_Route_From" />
+        <Parameter name="I_Route_To" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Itinerary_Type = &quot;Includes Bus&quot;) =&gt; (I_Route_From = &quot;Middle_East&quot; &amp;&amp; I_Route_To = &quot;Middle_East&quot;)">
+      <Parameters>
+        <Parameter name="I_Itinerary_Type" />
+        <Parameter name="I_Route_From" />
+        <Parameter name="I_Route_To" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Connection_Type = &quot;Direct&quot; ) =&gt; (I_Meal_APT != &quot;Elapsed for some flights&quot;)">
+      <Parameters>
+        <Parameter name="I_Connection_Type" />
+        <Parameter name="I_Meal_APT" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Connection_Type = &quot;Direct&quot; ) =&gt; (C_Meal_Exception != &quot;Yes/No&quot;)">
+      <Parameters>
+        <Parameter name="I_Connection_Type" />
+        <Parameter name="C_Meal_Exception" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Transaction_Type != &quot;Includes new excess baggage&quot;) =&gt; (I_Payment_Type = &quot;Free of charge&quot; )">
+      <Parameters>
+        <Parameter name="I_Transaction_Type" />
+        <Parameter name="I_Payment_Type" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Payment_Type = &quot;Free of charge&quot;) =&gt; (I_EXB_Concept = &quot;Not Applicable&quot; )">
+      <Parameters>
+        <Parameter name="I_Payment_Type" />
+        <Parameter name="I_EXB_Concept" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Booking_Type = &quot;New&quot;) =&gt; (I_Transaction_Type = &quot;New Meal and/or Seat&quot; )">
+      <Parameters>
+        <Parameter name="I_Booking_Type" />
+        <Parameter name="I_Transaction_Type" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Booking_Type = &quot;Partially Confirmed&quot; || I_Booking_Type = &quot;Waitlisted&quot; || I_Booking_Type = &quot;Subject to Availability&quot; ) =&gt; (I_Booking_Source = &quot;ATO/CTO&quot; || I_Booking_Source = &quot;Contact Centre&quot; || I_Booking_Source =&quot;Travel Agent&quot; )">
+      <Parameters>
+        <Parameter name="I_Booking_Type" />
+        <Parameter name="I_Booking_Source" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_Booking_Type = &quot;New&quot;) =&gt; (I_Booking_Source = &quot;IBE&quot; )">
+      <Parameters>
+        <Parameter name="I_Booking_Type" />
+        <Parameter name="I_Booking_Source" />
+      </Parameters>
+    </Constraint>
+  </Constraints>
+  <Testset doi="1">
+    <Testcase TCNo="0">
+      <Value>1</Value>
+      <Value>true</Value>
+      <Value>All Active</Value>
+      <Value>No</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>Hub</Value>
+      <Value>Middle_East</Value>
+      <Value>XX Only</Value>
+      <Value>Return</Value>
+      <Value>Not Elapsed</Value>
+      <Value>Not Elapsed</Value>
+      <Value>2A 2C 1I</Value>
+      <Value>1 Connection</Value>
+      <Value>false</Value>
+      <Value>Cash</Value>
+      <Value>Kilos</Value>
+      <Value>IBE</Value>
+      <Value>Confirmed</Value>
+      <Value>Includes new excess baggage</Value>
+    </Testcase>
+    <Testcase TCNo="1">
+      <Value>2</Value>
+      <Value>true</Value>
+      <Value>All Active</Value>
+      <Value>No</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>Hub</Value>
+      <Value>Middle_East</Value>
+      <Value>XX Only</Value>
+      <Value>Return</Value>
+      <Value>Not Elapsed</Value>
+      <Value>Not Elapsed</Value>
+      <Value>2A 2C 1I</Value>
+      <Value>1 Connection</Value>
+      <Value>false</Value>
+      <Value>Cash</Value>
+      <Value>Kilos</Value>
+      <Value>IBE</Value>
+      <Value>Confirmed</Value>
+      <Value>Includes new excess baggage</Value>
+    </Testcase>
+  </Testset>
+  <Header>
+    <Value />
+    <Value>C_MEAL_ENABLED</Value>
+    <Value>C_MEAL_STATUS</Value>
+    <Value>C_MEAL_EXCEPTION</Value>
+    <Value>C_SEAT_ENABLED</Value>
+    <Value>C_EXB_ENABLED</Value>
+    <Value>C_FFP_EXB_ENABLED</Value>
+    <Value>I_ROUTE_FROM</Value>
+    <Value>I_ROUTE_TO</Value>
+    <Value>I_ITINERARY_TYPE</Value>
+    <Value>I_TRIP_TYPE</Value>
+    <Value>I_MEAL_APT</Value>
+    <Value>I_EXCESS_APT</Value>
+    <Value>I_PASSENGER_TYPE</Value>
+    <Value>I_CONNECTION_TYPE</Value>
+    <Value>I_FREQUENT_FLYER</Value>
+    <Value>I_PAYMENT_TYPE</Value>
+    <Value>I_EXB_CONCEPT</Value>
+    <Value>I_BOOKING_SOURCE</Value>
+    <Value>I_BOOKING_TYPE</Value>
+    <Value>I_TRANSACTION_TYPE</Value>
+  </Header>
+  <Stat-Data>
+    <ExecutionTime>0.053</ExecutionTime>
+    <MaxDomainSize>9</MaxDomainSize>
+    <MinDomainSize>2</MinDomainSize>
+    <TotalNoOfCombination>20</TotalNoOfCombination>
+    <TotalNoOfTests>2</TotalNoOfTests>
+    <Algorithm>BaseChoice</Algorithm>
+  </Stat-Data>
+</System>
+

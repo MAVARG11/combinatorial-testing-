@@ -1,0 +1,132 @@
+Release Version 2.92 (10/7/2014)
+Major improvements:
+1. Improved the "Forbidden Tuples" constraint handling option, and set it to be default for user.
+"Forbidden Tuples" specifies that the validity check is handled using minimum forbidden tuples, 
+which are generated from constraints. Now, it is no longer an experimental feature, 
+but a complete and stable feature for all kinds of SUTs.
+Compared to "CSP Solver", "Forbidden Tuples" option works faster when given a system under test, 
+which has a large number of parameters with many constraints, and strength t>=2.  
+However, for some kind of system which has complex constraints, such as arcade_game_pl_fm and Gg4, 
+it may take a long time to calculate minimum forbidden tuples before generating test cases.
+For some system which only needs to cover a few combinations, "CSP Solver" would be faster.
+Both options will not affect the resulting test set.
+
+2. Note that, for CMD mode, "-Dconstraint=no|solver|tuples" has been deprecated, 
+user needs to use "-Dchandler=no|solver|forbiddentuples" instead. 
+"chandler" is abbreviation of "constraint handler" which seems more accurate.
+"-Dchandler=forbiddentuples" is its default option for both GUI and CMD mode.
+
+3. Added simplify step for intermediate set of FTs during MFTs generation to reduce space cost. 
+It will greatly reduce the memory requirement of using "Forbidden Tuples" option to build.
+
+4. Fixed a critical bug that, when using mixed strength, in order to cover some mixed relations, 
+ACTS may fall into an infinite loop, since an 1-way tuple would never be marked as covered, 
+though it is already covered in another 2-way combinations.
+
+Minor improvements:
+1. Adjusted some choices of words on GUI to make the meanings clearer.
+2. Fixed a bug inherited from older version, so that "Forbidden Tuples" 
+now can handle these enum type parameters which have only one value to choose.
+3. Fixed a bug to allow relational expression with two enum type parameters in GUI constraint editor.
+4. Fixed a bug that caused exception when do Import for a system with some parameter, 
+which contains "Relations" as substring, such as "ExtendRelationshipEdge" in Violet.xml.
+5. Fixed a bug to correctly export strength of existing test set in opened SUT.
+6. Fixed a bug to refresh Build Options Window on GUI when change algo, close it and then reopen.
+
+
+Release Version 2.9 (5/12/2014)
+-Added "-Dalgo=null" option that can be used to check coverage only (no test generation).
+-Added warnings for exceptions occur when parsing system content.
+-Added warning for user to close the existing system before opening a same inner name system file.
+-Added enum parameter value existence check while parsing a constraint including enum parameter.
+-Added restrict of removing an enum parameter value which is specified in a constraint.
+-Changed GUI Operation->Verify menu items for easy to use.
+-Changed Export CSV format that can be directly used as Import CSV-R format.
+-Supported to save imported test set into system file.
+-Supported to Save system (or w/ its test set) in TXT format file.
+-Supported to enumerate the values of number type parameter by comma in input box.
+-Fixed CMD -Doutput default output to be NIST test set format.
+-Fixed CMD -Dmode=extend mode to run extend test set generation.
+-Fixed GUI parameter modification window display error when the number of parameter values is more than 9.
+-Fixed GUI mixed strength build option for IPOG-F.
+-Fixed GUI copy & paste NullPointerException when baseChoiceValues are not given.
+-Fixed Engine set back the original relations after adding default 1-way relation for all params in mixed strength build.
+-Fixed GUI graph plot to fit the strength of test set (single and mixed strength).
+-Fixed the bug on extend mode generation when build strength is choosed bigger than # of params.
+-Fixed the bug of extending an existing test set to satisfy constraints when the test set is recently built or imported.
+-Fixed some minor bugs.
+
+Beta 2 Revision 2.8 (5/4/2013)
+-New constraint hanlding strategy: using forbidden tuples.
+-Removed the Paintball algorithm.
+-Improved the way of computing the number of covered tuples.
+-Fixed extension mode for IPOG-F.
+-Variable name can start with digits.
+-Added a new menu item "save SUT as" that allows the user to save a SUT without test set. 
+-Fixed some minor bugs.
+
+Beta 2 Revision 2.7 (8/13/2012)
+-Added the "Mixed Strength" option and fixed several bugs in multiple relations.
+-Added a button for base choices configuration.
+-Improved the options menu.
+
+Beta 2 Revision 2.6 (6/3/2012)
+-Major changes in IPOG-F. Added constraint support and mix strength.
+-Fixed a bug in constraint manager (domain propogation)
+-Fixed a bug when loading constraints from a file
+-Added several dialogs: "no constraint/mixed strength support" before build, "out of memory" in coverage checking and generating after-build statistics.
+-Added progress label for IPOG, IPOG-F and IPOG-D algorithm.
+-Removed leading spaces in the exported file
+-Fixed build() function in API(will call IPOG by default)
+
+Beta 2 Revision 2.5 (3/30/2012)
+-Major improvements in IPOG, mainly in tuple data structure.
+-Minor changes in CMD console (system check, version).
+-Imporved coverage checker.
+-Fixed "==" operation for new constraint solver.
+-Added an option "ignoring constraint".
+-Set "Randomize Dont Cares" as the default option.
+-Incresed the number of "last opened files" to 10.
+
+Beta 2 Revision 2.4 (1/25/2012)
+-Fixed several bug for BasicChoice algorithm with constraints.
+-Fixed several bug for BasicChoice algorithm with txt data file.
+-Fixed a bug that causes mismatch value/header in test set for copied systems.  
+-Fixed a bug that causes the clear button for multiline constraint stop working.
+-Inputing enum values are trimmed before using. 
+-Feature removed: set output parameter, rename parameter, reorder parameter.
+-Improved verify result display.
+
+Beta 2 Revision 2.3 (1/18/2012)
+-Fixed some bugs that cause problems after remove or modify a parameter and build/save. 
+-The out-of-sync test set will not be saved any more.
+-Fixed a bug that causes the ParamModifyForm out of screen when the index of parameter is large. 
+-Fixed some bugs in ParamModifyForm. Now it perfoms type check when adding new values.
+-Fixed some bugs in extending a test set with modified parameters.
+-A constraint check will be performed before test generation to make sure it's solvable. 
+-Now you can remove mutiple constraints at the same time.
+
+Beta 2 Revision 2.2 (1/9/2012)
+-A default relation will be added if the input txt file have no relation section.
+-Accept more formats of constraint in txt files: without-name or not-parenthesized. 
+-Fixed a bug that cause incorrectly parsing a constraint with many parentheies. 
+-Removed the popup menu for parameters in tree view.
+-Now the file chooser can filter txt files.
+-The tree node can not be edited any more.
+-Improved the tie-break strategy in IPOG horizontal expansion. 
+
+Beta 2 Revision 2.1 (1/6/2012)	
+-Removed copy and paste features in tree view for parameters .
+-Fixed a bug in function of copy/paste systems.
+-Fixed several bugs when loading a system from .txt file.
+-Fixed a bug that cause statistics graph doesn't refresh after importing.
+-Export format is changed. The quotation of enum value is removed. 
+-Fixed a bug that cause coverage check (with constraint) crashs after importing.
+
+Beta 2 Revision 2.0 (1/6/2012)	
+-Integrated Choco constraint solver.
+-Proived API support.
+-Fixed a bug that may cause severe performance issue in constraint evaluation
+-Fixed several bugs that may cause duplicate boolean/range domains.
+-Fixed a bug that causes crash when user removes certain parameter after builds system.
+-Range type parameter now can be all negative values.

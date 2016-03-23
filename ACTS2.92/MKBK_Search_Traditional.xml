@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<System name="MKBK_Search_Traditional">
+  <Parameters>
+    <Parameter id="0" name="I_Trip_Type" type="1">
+      <values>
+        <value>OW</value>
+        <value>RT</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="1" name="I_From" type="1">
+      <values>
+        <value>Africa (JNB CAI ALY)</value>
+        <value>Europe</value>
+        <value>Far East</value>
+        <value>Australia Japan Korea</value>
+        <value>GCC Levant Iran Indian Sub</value>
+        <value>Hub</value>
+        <value>North America</value>
+        <value>South America</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="2" name="I_To" type="1">
+      <values>
+        <value>Africa</value>
+        <value>Europe</value>
+        <value>Far East</value>
+        <value>Australia Japan Korea</value>
+        <value>GCC Levant Iran Indian Sub</value>
+        <value>Hub</value>
+        <value>North America</value>
+        <value>South America</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="3" name="I_Departure" type="1">
+      <values>
+        <value>Default Date</value>
+        <value>Current Date</value>
+        <value>Minimum Date with APT &gt; 0</value>
+        <value>Maximum Date</value>
+        <value>Random Date Between Min and Max</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="4" name="I_Return" type="1">
+      <values>
+        <value>Default Date</value>
+        <value>Current Date</value>
+        <value>Minimum Date with APT &gt; 0</value>
+        <value>Maximum Date</value>
+        <value>Random Date Between Min and Max</value>
+        <value>~Less than departure</value>
+        <value>Not Applicable</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="5" name="I_Cabin_Class" type="1">
+      <values>
+        <value>Non Premium</value>
+        <value>Premium</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="6" name="I_Pax" type="1">
+      <values>
+        <value>Minimum (1A)</value>
+        <value>Maximum (5A 4C 5I)</value>
+        <value>Maximum (9A 9I)</value>
+        <value>Random valid (2A 2C 1I)</value>
+        <value>~Invalid (9A 9C 9I)</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="8" name="C_APT_Level" type="1">
+      <values>
+        <value>Global</value>
+        <value>Region</value>
+        <value>Country</value>
+        <value>Station</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="9" name="C_APT_IO" type="1">
+      <values>
+        <value>Outbound &gt; Inbound</value>
+        <value>Outbound &lt; Inbound</value>
+        <value>Outbound = Inbound</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="10" name="C_Sales_Enabled" type="1">
+      <values>
+        <value>Enabled</value>
+        <value>~Disabled</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="11" name="I_Promo" type="1">
+      <values>
+        <value>Blank</value>
+        <value>~Invalid Promo (Code Route Sales_Period Travel_Period Pax Count)</value>
+        <value>Route Specific</value>
+        <value>Sales Period</value>
+        <value>Travel Period</value>
+        <value>Pax Count</value>
+        <value>Mixed Restrictions</value>
+        <value>Age Restricted</value>
+        <value>Visa Restricted</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+  </Parameters>
+  <OutputParameters />
+  <Relations />
+  <Constraints>
+    <Constraint text="(I_Trip_Type = &quot;OW&quot;) =&gt; (I_Return = &quot;Not Applicable&quot;)">
+      <Parameters>
+        <Parameter name="I_Trip_Type" />
+        <Parameter name="I_Return" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(I_From != &quot;GCC Levant Iran Indian Sub&quot; ) =&gt; (I_From != I_To)">
+      <Parameters>
+        <Parameter name="I_From" />
+        <Parameter name="I_To" />
+      </Parameters>
+    </Constraint>
+  </Constraints>
+</System>
+

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<System name="NSP TEST">
+  <Parameters>
+    <Parameter id="0" name="Trip_Type" type="1">
+      <values>
+        <value>OW</value>
+        <value>RT</value>
+        <value>MC</value>
+      </values>
+      <basechoices>
+        <basechoice>OW</basechoice>
+        <basechoice>RT</basechoice>
+        <basechoice>MC</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="1" name="Region_From" type="1">
+      <values>
+        <value>North_America</value>
+        <value>South_America</value>
+        <value>Africa</value>
+        <value>European</value>
+        <value>Indian</value>
+        <value>Middle_East</value>
+        <value>Australia</value>
+        <value>Asia_Pacific</value>
+      </values>
+      <basechoices>
+        <basechoice>North_America</basechoice>
+        <basechoice>European</basechoice>
+        <basechoice>Indian</basechoice>
+        <basechoice>Middle_East</basechoice>
+        <basechoice>Asia_Pacific</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="2" name="Region_To" type="1">
+      <values>
+        <value>North_America</value>
+        <value>South_America</value>
+        <value>African</value>
+        <value>European</value>
+        <value>Indian</value>
+        <value>Middle_East</value>
+        <value>Autralian</value>
+        <value>Asia_Pacific</value>
+      </values>
+      <basechoices>
+        <basechoice>North_America</basechoice>
+        <basechoice>European</basechoice>
+        <basechoice>Indian</basechoice>
+        <basechoice>Middle_East</basechoice>
+        <basechoice>Asia_Pacific</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="4" name="Itinerary" type="1">
+      <values>
+        <value>5th_Freedom</value>
+        <value>XX_Only</value>
+        <value>XX_Code_Share</value>
+        <value>XX_One_World</value>
+        <value>XX_Interline</value>
+        <value>Includes_Train</value>
+        <value>Includes_Bus</value>
+      </values>
+      <basechoices>
+        <basechoice>XX_Only</basechoice>
+        <basechoice>XX_Code_Share</basechoice>
+        <basechoice>XX_One_World</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="8" name="APT_Check" type="1">
+      <values>
+        <value>Satisfies_APT</value>
+        <value>Date_Not_Satisfying_Weekly_Satisfying</value>
+        <value>Date_Not_Satisfying_Weekly_Not_Satisfying</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+    <Parameter id="9" name="Cabin" type="1">
+      <values>
+        <value>Not_Premium</value>
+        <value>Premium</value>
+      </values>
+      <basechoices>
+        <basechoice>Premium</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="10" name="No_Of_Segments" type="0">
+      <values>
+        <value>1</value>
+        <value>2</value>
+        <value>3</value>
+        <value>4</value>
+        <value>5</value>
+        <value>6</value>
+        <value>0</value>
+      </values>
+      <basechoices>
+        <basechoice>1</basechoice>
+        <basechoice>4</basechoice>
+        <basechoice>6</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="11" name="Jaw_Type" type="1">
+      <values>
+        <value>Open</value>
+        <value>Closed</value>
+        <value>Mixed</value>
+        <value>Not_Applicable</value>
+      </values>
+      <basechoices>
+        <basechoice>Open</basechoice>
+      </basechoices>
+    </Parameter>
+    <Parameter id="13" name="Pax_Count" type="1">
+      <values>
+        <value>1A 0C 0I</value>
+        <value>2A 1C 1I</value>
+        <value>2A 2I</value>
+        <value>5A 4C 5I</value>
+        <value>0A 1C 1I</value>
+        <value>9A 9C 9I</value>
+      </values>
+      <basechoices>
+        <basechoice />
+      </basechoices>
+    </Parameter>
+  </Parameters>
+  <OutputParameters />
+  <Relations />
+  <Constraints>
+    <Constraint text="(Trip_Type != &quot;MC&quot;) =&gt; (Jaw_Type = &quot;Not_Applicable&quot; )">
+      <Parameters>
+        <Parameter name="Trip_Type" />
+        <Parameter name="Jaw_Type" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(Trip_Type != &quot;MC&quot;) =&gt; (No_Of_Segments = 0)">
+      <Parameters>
+        <Parameter name="Trip_Type" />
+        <Parameter name="No_Of_Segments" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(Itinerary = &quot;Includes_Train&quot;) =&gt; (Region_From = &quot;European&quot; &amp;&amp; Region_To = &quot;European&quot;) ">
+      <Parameters>
+        <Parameter name="Itinerary" />
+        <Parameter name="Region_From" />
+        <Parameter name="Region_To" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(Itinerary = &quot;Includes_Bus&quot;) =&gt; (Region_From =&quot;Middle_East&quot; &amp;&amp; Region_To = &quot;Middle_East&quot;)">
+      <Parameters>
+        <Parameter name="Itinerary" />
+        <Parameter name="Region_From" />
+        <Parameter name="Region_To" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(Trip_Type = &quot;MC&quot;) =&gt; (Jaw_Type = &quot;Open&quot; || Jaw_Type = &quot;Closed&quot; || Jaw_Type = &quot;Mixed&quot;)">
+      <Parameters>
+        <Parameter name="Trip_Type" />
+        <Parameter name="Jaw_Type" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(Trip_Type =&quot;MC&quot;) =&gt; ( No_Of_Segments &gt;=1 &amp;&amp; No_Of_Segments &lt;= 6 )">
+      <Parameters>
+        <Parameter name="Trip_Type" />
+        <Parameter name="No_Of_Segments" />
+      </Parameters>
+    </Constraint>
+  </Constraints>
+</System>
+
